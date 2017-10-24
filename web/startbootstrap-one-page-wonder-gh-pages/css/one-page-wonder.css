@@ -1,0 +1,35 @@
+/*!
+ * Start Bootstrap - One Page Wonder (https://startbootstrap.com/template-overviews/one-page-wonder)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+header.masthead {
+  background: url('https://www.designmantic.com/blog/wp-content/uploads/2016/02/Movie-poster-design-trends.jpg') no-repeat center center scroll;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: 100%;
+  -o-background-size: auto;
+}
+
+header.masthead>.overlay {
+  padding: 20rem 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 992px) {
+  header.masthead>.overlay {
+    padding: 20rem 0;
+  }
+}
