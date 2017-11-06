@@ -15,7 +15,7 @@ body {
 }
 
 header.masthead {
-  background: url('https://www.designmantic.com/blog/wp-content/uploads/2016/02/Movie-poster-design-trends.jpg') no-repeat center center scroll;
+  background: url('../img/bg_head.jpg') no-repeat center center scroll;
   -webkit-background-size: auto;
   -moz-background-size: auto;
   background-size: 100%;
