@@ -2,7 +2,7 @@ import pandas as pd
 import json
 import numpy as np
 import pygal
-from pygal.style import NeonStyle
+from pygal.style import CleanStyle
 """Project PSIT"""
 with open('check.json') as genres:
     DATA = json.load(genres) #import json file
@@ -42,7 +42,7 @@ def analyse():
 def plotgraph(check, count):
     """PLOT GRAPH"""
     mem = analyse()
-    pie_chart = pygal.Pie(fill=True, interpolate='cubic', style=NeonStyle)
+    pie_chart = pygal.Pie(fill=True, interpolate='cubic', style=CleanStyle)
     pie_chart.title = 'Genres Static of '+check
     for i in mem[check].keys():
         count += int(mem[check][i])
