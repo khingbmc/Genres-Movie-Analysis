@@ -1,4 +1,4 @@
-/*!
+s/*!
  * Start Bootstrap - One Page Wonder (https://startbootstrap.com/template-overviews/one-page-wonder)
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
@@ -15,7 +15,7 @@ body {
 }
 
 header.masthead {
-  background: url('../img/bg_head.jpg') no-repeat center center fixed;
+  background: url('../img/bg_head.jpg') no-repeat center center fixed;  /*fixed*/
   -webkit-background-size: auto;
   -moz-background-size: auto;
   background-size: 100%;
