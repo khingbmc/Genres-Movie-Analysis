@@ -15,6 +15,7 @@
 }
 
 header.masthead {
+
   background: url('../img/bg_head.jpg') no-repeat center center fixed;  /*fixed*/
   height: 100%;
   -webkit-background-size: auto;
@@ -34,8 +35,4 @@ header.masthead>.overlay {
   header.masthead>.overlay {
     padding: 20rem 0;
   }
-}
-
-header.masthead>.overlay>.contaner{
-  position: fixed;
 }
