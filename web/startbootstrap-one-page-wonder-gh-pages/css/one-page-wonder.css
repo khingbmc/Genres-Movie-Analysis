@@ -15,7 +15,7 @@ body {
 }
 
 header.masthead {
-  background: url('../img/bg_head.jpg') no-repeat center center scroll;
+  background: url('../img/bg_head.jpg') no-repeat center center scroll; /*check git*/
   -webkit-background-size: auto;
   -moz-background-size: auto;
   background-size: 100%;
