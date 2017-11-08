@@ -2,7 +2,7 @@
 import json
 import pandas as pd
 import pygal
-from pygal.style import LightSolarizedStyle
+from pygal.style import NeonStyle
 
 with open('check.json') as genres:
     DATA = json.load(genres) #import json file
@@ -28,7 +28,7 @@ def memory_director():
     return check_dict, df_movie, df_credits
 
 
-def analyse(director_name):
+def analyse(director_name, count):
     """function analyse"""
     director, df_movie, df_credits = memory_director()
     check = {} #dictionary movie id and genres
@@ -42,20 +42,21 @@ def analyse(director_name):
         if i == director_name:
             for j in director[i]:
                 for k in check[j]:
+                    count += 1
                     if k not in genres:
                         genres[k] = 1
                     else:
                         genres[k] += 1
-    return genres
+    return genres, count
     """genres is static genres of director
     and director_name is input name director"""
 
 def plotgraph(name):
     """function plotgraph"""
-    pie_director = pygal.Pie(fill=True, interpolate='cubic', style=LightSolarizedStyle)
-    genres = analyse(name)
-    pie_director.title = 'Static Genres of '+name+' directing.'
+    pie_director = pygal.Pie(fill=True, interpolate='cubic', style=NeonStyle)
+    genres, count = analyse(name, 0)
+    pie_director.title = 'Static Genres of '+name+' directing.(%)'
     for i in genres:
-        pie_director.add(i, genres[i])
+        pie_director.add(i, round(genres[i]/count*100, 3))
     pie_director.render_to_file('director_genres.svg')
 plotgraph(input())
