@@ -10,12 +10,19 @@
   height: 100%;
 }
 
-@media (min-width: 992px) {
+.navbar {
+  position: relative;
+  min-height: 50px;
+
+  border: 1px solid transparent;
+}
+
+/*@media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
 }
-
+*/
 header.masthead {
 
   background: url('../img/bg_head.jpg') repeat center center fixed;  /*fixed*/
