@@ -1,5 +1,6 @@
-input[type=text] {
+/*input[type=text] 
     width: 250px;
+    height: 60%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -7,11 +8,9 @@ input[type=text] {
     background-color: white;
     background-position: 10px 10px; 
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 12px 12px 40px;
+    margin: 2%;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-    width: 100%;
-}
+*/
+. background: url('../img/bg_head.jpg')
