@@ -1,0 +1,39 @@
+/*!
+ * Start Bootstrap - One Page Wonder (https://startbootstrap.com/template-overviews/one-page-wonder)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
+ */
+
+ body, html {
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+header.masthead {
+
+  background: url('../img/bg_head.jpg') repeat center center fixed;  /*fixed*/
+  height: 100%;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: 100%;
+  -o-background-size: auto;
+}
+
+header.masthead>.overlay {
+  padding: 12rem 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  header.masthead>.overlay {
+    padding: 20rem 0;
+    height: 100%;
+  }
+}
