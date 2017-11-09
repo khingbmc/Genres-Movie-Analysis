@@ -1,4 +1,6 @@
-/*input[type=text] 
+/*link contact*/
+
+/*input[type=text]     
     width: 250px;
     height: 60%;
     box-sizing: border-box;
@@ -13,4 +15,10 @@
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 */
+<<<<<<< HEAD:web/startbootstrap-one-page-wonder-gh-pages/css/style.css
 .background: url('../img/bg_head.jpg')
+=======
+/*. background: url('../img/bg_head.jpg')
+*/
+/* The Modal (background) */
+>>>>>>> 5111cc3dd57f046b5ad3c361c66aa4ca348fa046:web/web_project/css/style.css
