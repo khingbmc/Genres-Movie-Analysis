@@ -4,16 +4,17 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
  */
 
+}
  body, html {
   height: 100%;
 }
 
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
 }
-
+*/
 header.masthead {
 
   background: url('../img/bg_head.jpg') repeat center center fixed;  /*fixed*/
@@ -38,3 +39,6 @@ header.masthead>.overlay {
   }
 }
 
+/*.carousel{
+  margin-bottom: 30%;
+}*/
