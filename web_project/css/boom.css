@@ -1,4 +1,4 @@
-input[type=text] {
+input[type=search] {
     width: 250px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -12,6 +12,23 @@ input[type=text] {
     transition: width 0.4s ease-in-out;
 }
 
-input[type=text]:focus {
+input[type=search]:focus {
     width: 100%;
+}
+.form-group{
+    width: 200px;
+    margin: 1% auto;
+    border-radius: 4px;
+}
+label{
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0.2em auto;
+}
+#myModal{
+    width: 100%;
+}
+.modal-content{
+    width: 800px;
+    height: 800px;
 }
