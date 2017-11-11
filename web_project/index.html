@@ -100,10 +100,12 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.getElementById("mySearch").addEventListener("search", myFunction);
-        function myFunction() {
-          alert('a');
-        }
+        $( document ).ready(function(){
+          $('#mySearch').on("search", myFunction);
+          function myFunction() {
+            alert('a');
+          }
+        });
     </script>
   </body>
 
