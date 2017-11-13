@@ -11,16 +11,16 @@
   <title>Contact</title>
   
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="css/one-page-wonder.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/one-page-wonder.css') }}">
   
   <!-- boom csss, carousel-->
-  <link rel="stylesheet" type="text/css" href="css/boom.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">  
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/boom.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap.js">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.js') }}">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -35,20 +35,20 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Genres Movie Analytic</a>
+      <a class="navbar-brand" href="/">Genres Movie Analytic</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="/contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Credit</a>
+            <a class="nav-link" href="/credit">Credit</a>
           </li>
         </ul>
       </div>
@@ -74,41 +74,41 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active"> 
-            <img src="img\1.jpeg" alt="khing" style="width:100%;">
+            <img src="{{ url_for('static', filename='img/1.jpeg') }}" alt="khing" style="width:100%;">
             <div class="carousel-caption">
               <p></p>
             </div>
           </div>
 
           <div class="item">
-            <img src="img\2.jpg" alt="koon" style="width:100%;">
+            <img src="{{ url_for('static', filename='img/2.jpg') }}" alt="koon" style="width:100%;">
             <div class="carousel-caption">
               <p></p>
             </div>
           </div>
 
           <div class="item">
-            <img src="img\3.jpeg" alt="mix" style="width:100%;">
+            <img src="{{ url_for('static', filename='img/3.jpeg') }}" alt="mix" style="width:100%;">
             <div class="carousel-caption">
               <p></p>
             </div>
           </div>
           <div class="item">
-            <img src="img\4.jpeg" alt="mo" style="width:100%;">
-            <div class="carousel-caption">
-              <p></p>
-            </div>
-          </div>
-
-          <div class="item">
-            <img src="img\5.jpeg" alt="pack" style="width:100%;">
+            <img src="{{ url_for('static', filename='img/4.jpeg') }}" alt="mo" style="width:100%;">
             <div class="carousel-caption">
               <p></p>
             </div>
           </div>
 
           <div class="item">
-            <img src="img\6.jpg" alt="boom" style="width:100%;">
+            <img src="{{ url_for('static', filename='img/5.jpeg') }}" alt="pack" style="width:100%;">
+            <div class="carousel-caption">
+              <p></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="{{ url_for('static', filename='img/6.jpg') }}" alt="boom" style="width:100%;">
             <div class="carousel-caption">
               <p></p>
             </div>
@@ -131,8 +131,8 @@
   </header>
 </body>
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
 </html>

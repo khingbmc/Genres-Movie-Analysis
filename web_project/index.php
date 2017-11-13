@@ -11,12 +11,12 @@
   <title>Genres Movie Analytic</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="{{ url_for('static', filename='css/one-page-wonder.css') }}" rel="stylesheet">
+  <link href="css/one-page-wonder.css" rel="stylesheet">
   <!-- boom csss-->
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/boom.css')}}">
+  <link rel="stylesheet" type="text/css" href="css/boom.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="/">Genres Movie Analytic</a>
+      <a class="navbar-brand" href="index.html">Genres Movie Analytic</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -36,13 +36,13 @@
             </a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/credit">Credit</a>
+            <a class="nav-link" href="#">Credit</a>
           </li>
         </ul>
       </div>
@@ -51,24 +51,30 @@
   <!-- END NAVBAR -->
 
   <header class="masthead">
-    <div class="overlay">
       <div class="container">
         <h1 class="display-1 text-white">Genres Movie Analytic</h1>
         <h2 class="display-4 text-white">Search of your movie</h2>
         <form>
-          <input type="search" name="serach" id="mySearch" placeholder="Serach..">
+          <input type="text" name="serach" placeholder="Serach..">
         </form>
 
-        <div class="form-group">
-          <label for="select_bar">Type</label>
-          <select class="form-control show-tick" id="select_bar">
-            <option>MOVIES</option>
-            <option>PRODUCTION</option>
-            <option>YEARS</option>
-            <option>DIRECTOR</option>
-          </select>
-        </div>
+        <div class="dropdown">
+          <p>
 
+            <!-- space -->
+          </p>
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TYPE
+            <span class="caret"></span>
+          </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">MOVIES</a></li>
+              <li><a href="#">PRODUCTION</a></li>
+              <li><a href="#">YEARS</a></li>
+              <li><a href="#">DIRECTOR</a></li>
+            </ul>  
+          </div>
+
+        </div>
       </div>
       <!-- Trigger the modal with a button -->
       <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
@@ -78,11 +84,11 @@
           <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">Modal Header</h4>
-              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
             </div>
             <div class="modal-body">
-              <object type="image/svg+xml" data="..\analysis\director_genres.svg">
+              <object type="image/svg+xml" data="..\..\director_genres.svg">
                 Your browser does not support SVG
             </object>
             </div>
@@ -93,20 +99,12 @@
           
         </div>
       </div>
-    </div>
     </header>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script>
-        $( document ).ready(function(){
-          $('#mySearch').on("search", myFunction);
-          function myFunction() {
-            alert('a');
-          }
-        });
-    </script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   </body>
 
   </html>

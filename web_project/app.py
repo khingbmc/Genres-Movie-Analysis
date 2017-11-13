@@ -6,10 +6,18 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-def main():
-    app.run(debug=True, host='127.0.0.1')
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/credit')
+def credit():
+    return render_template('credit.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 
 if __name__ == '__main__':
-    main()
-
-
+    app.run(debug=True)
