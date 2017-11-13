@@ -8,8 +8,8 @@ with open('check.json') as genres:
 
 def read():
     """Read file csv"""
-    return pd.read_csv('dataset\\tmdb_5000_movies.csv'),\
-    pd.read_csv('dataset\\tmdb_5000_credits.csv')
+    return pd.read_csv('..\\dataset\\tmdb_5000_movies.csv'),\
+    pd.read_csv('..\\dataset\\tmdb_5000_credits.csv')
 
 def memory_director():
     """function analyse data"""

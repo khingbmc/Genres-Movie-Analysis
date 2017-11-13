@@ -5,7 +5,7 @@ from pygal.style import NeonStyle
 from functools import reduce
 
 def read():
-    return pd.read_csv('dataset\\tmdb_5000_movies.csv')
+    return pd.read_csv('..\\dataset\\tmdb_5000_movies.csv')
 
 
 def analyse(name, genres_pop):
