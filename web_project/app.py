@@ -1,4 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect, jsonify
+import sys
+sys.path.append('../')
+from analysis import director_genres, director_genres_popular
 
 app = Flask(__name__)
 
@@ -22,6 +25,9 @@ def contact():
 def show():
     search = request.args.get('search', None)
     type_ = request.args.get('type_', None)
+    if type_ == 'director':
+        director_genres.plotgraph(search.replace('+', ' ')) 
+        director_genres_popular.plotgraph(search.replace('+', ' '))
     return render_template('show.html')
 
 if __name__ == '__main__':
