@@ -70,6 +70,7 @@
       </div>
       <!-- Trigger the modal with a button -->
       <button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sent</button>
+      </button> <!-- data-toggle="modal" data-target="#myModal" -->
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -97,14 +98,6 @@
     <!-- Bootstrap core JavaScript -->
     <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script>
-        $( document ).ready(function(){
-          $('#mySearch').on("search", myFunction);
-          function myFunction() {
-            alert('a');
-          }
-        });
-    </script>
   </body>
 
   </html>
