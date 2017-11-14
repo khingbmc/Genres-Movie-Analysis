@@ -17,7 +17,7 @@
     */
  
     .bg_mid{
-        background: url('../img/bg_head.jpg') repeat center center fixed;  /*fixed*/
+        background: white;  /*fixed*/
         height: 100%;
         -webkit-background-size: auto;
         -moz-background-size: auto;
