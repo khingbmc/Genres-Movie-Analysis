@@ -55,23 +55,21 @@
       <div class="container">
         <h1 class="display-1 text-white">Genres Movie Analytic</h1>
         <h2 class="display-4 text-white">Search of your movie</h2>
-        <form>
-          <input type="search" name="serach" id="mySearch" placeholder="Serach..">
-        </form>
+        <form action="/show">
+          <input type="search" name="search" id="mySearch" placeholder="Serach..">
 
         <div class="form-group">
           <label for="select_bar">Type</label>
-          <select class="form-control show-tick" id="select_bar">
-            <option>MOVIES</option>
-            <option>PRODUCTION</option>
-            <option>YEARS</option>
-            <option>DIRECTOR</option>
+          <select class="form-control show-tick" id="select_bar" name="type_">
+            <option value="production">PRODUCTION</option>
+            <option value="years">YEARS</option>
+            <option value="director">DIRECTOR</option>
           </select>
         </div>
 
       </div>
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+      <button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sent</button>
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -90,7 +88,7 @@
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
-          
+        </form>
         </div>
       </div>
     </div>
