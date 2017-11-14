@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect, jsonify
+
 app = Flask(__name__)
 
 @app.route('/', methods = ['GET'])
@@ -21,7 +22,7 @@ def contact():
 def show():
     search = request.args.get('search', None)
     type_ = request.args.get('type_', None)
-    return type_
+    return render_template('show.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
