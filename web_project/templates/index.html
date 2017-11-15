@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  
   <title>Genres Movie Analytic</title>
-
+  
   <!-- Bootstrap core CSS -->
   <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-
+  
   <!-- Custom styles for this template -->
   <link href="{{ url_for('static', filename='css/one-page-wonder.css') }}" rel="stylesheet">
   <!-- boom csss-->
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+  
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -49,7 +49,7 @@
     </div>
   </nav>
   <!-- END NAVBAR -->
-
+  
   <header class="masthead">
     <div class="overlay">
       <div class="container">
@@ -57,47 +57,28 @@
         <h2 class="display-4 text-white">Search of your movie</h2>
         <form action="/show">
           <input type="search" name="search" id="mySearch" placeholder="Serach..">
-
-        <div class="form-group">
-          <label for="select_bar">Type</label>
-          <select class="form-control show-tick" id="select_bar" name="type_">
-            <option value="production">PRODUCTION</option>
-            <option value="years">YEARS</option>
-            <option value="director">DIRECTOR</option>
-          </select>
+          
+          <div class="form-group">
+            <label for="select_bar">Type</label>
+            <select class="form-control show-tick" id="select_bar" name="type_">
+              <option value="production">PRODUCTION</option>
+              <option value="years">YEARS</option>
+              <option value="director">DIRECTOR</option>
+            </select>
+          </div>
+          
         </div>
-
-      </div>
-      <!-- Trigger the modal with a button -->
-      <button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sent</button>
+        <!-- Trigger the modal with a button -->
+        <button type="submit" class="btn btn-info btn-lg">Sent</button>
       </button> <!-- data-toggle="modal" data-target="#myModal" -->
       <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Modal Header</h4>
-              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-            </div>
-            <div class="modal-body">
-              <object type="image/svg+xml" data="..\analysis\director_genres.svg">
-                Your browser does not support SVG
-            </object>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </form>
-        </div>
-      </div>
     </div>
-    </header>
+  </div>
+</header>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  </body>
+<!-- Bootstrap core JavaScript -->
+<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+</body>
 
-  </html>
+</html>

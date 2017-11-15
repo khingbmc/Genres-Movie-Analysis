@@ -38,12 +38,12 @@ def analyse(year):
 def plotgraph(year, check):
     """This function is Plot graph"""
     memory, count1 = analyse(year)
-    plot_bar = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle)
+    plot_bar, check1 = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle), 0
     plot_bar.title = 'Genres Satic in '+year
     for i in memory:
         check += memory[i]*count1
     for i in memory:
         check1 += memory[i]*count1/check*100
         plot_bar.add(i, round(memory[i]*count1/check*100, 3))
-    plot_bar.render_to_file('static/svg/genres_production.svg')
-plotgraph(input(), 0)
+    plot_bar.render_to_file('../web_project/static/svg/year.svg')
+

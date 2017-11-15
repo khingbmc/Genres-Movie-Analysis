@@ -39,8 +39,9 @@ def analyse():
     return memory
 
 
-def plotgraph(check, count):
+def plotgraph(check):
     """PLOT GRAPH"""
+    count = 0
     mem = analyse()
     pie_chart = pygal.Pie(fill=True, interpolate='cubic', style=NeonStyle)
     pie_chart.title = 'Genres Static of '+check
@@ -48,5 +49,5 @@ def plotgraph(check, count):
         count += int(mem[check][i])
     for i in mem[check].keys():
         pie_chart.add(DATA[str(i)], int(mem[check][i])/count*100)
-    pie_chart.render_to_file('static/svg/PieGraph_genresProduction.svg')
-plotgraph(input(), 0)
+    pie_chart.render_to_file('static/svg/director_genres.svg')
+

@@ -46,4 +46,4 @@ def plotgraph(name_director):
         count += popular_genres[i]
     chart.x_labels = map(str, popular_genres.keys())
     chart.add('popularity', [round(popular_genres[x]/count*100, 4) for x in popular_genres.keys()])
-    chart.render_to_file('../web_project/static/svg/director_popular.svg')
+    chart.render_to_file('../web_project/static/svg/popular_d.svg')
