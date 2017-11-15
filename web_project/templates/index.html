@@ -17,68 +17,71 @@
   <link href="{{ url_for('static', filename='css/one-page-wonder.css') }}" rel="stylesheet">
   <!-- boom csss-->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/boom.css')}}">
-</head>
-
-<body>
-  
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="/">Genres Movie Analytic</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/credit">Credit</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- END NAVBAR -->
-  
-  <header class="masthead">
-    <div class="overlay">
-      <div class="container">
-        <h1 class="display-1 text-white">Genres Movie Analytic</h1>
-        <h2 class="display-4 text-white">Search of your movie</h2>
-        <form action="/show">
-          <input type="search" name="search" id="mySearch" placeholder="Serach..">
-          
-          <div class="form-group">
-            <label for="select_bar">Type</label>
-            <select class="form-control show-tick" id="select_bar" name="type_">
-              <option value="production">PRODUCTION</option>
-              <option value="years">YEARS</option>
-              <option value="director">DIRECTOR</option>
-            </select>
+  <style type="text/css">
+    @media (min-width: 992px) {
+      header.masthead>.overlay {
+        padding: 8.5rem 0;}}
+      </style>
+    </head>
+    <body>
+      
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">Genres Movie Analytic</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <!-- <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/credit">Credit</a>
+              </li>
+            </ul>
           </div>
-          
         </div>
-        <!-- Trigger the modal with a button -->
-        <button type="submit" class="btn btn-info btn-lg">Sent</button>
-      </button> <!-- data-toggle="modal" data-target="#myModal" -->
-      <!-- Modal -->
-    </div>
-  </div>
-</header>
-
-<!-- Bootstrap core JavaScript -->
-<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
-<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-</body>
-
-</html>
+      </nav>
+      <!-- END NAVBAR -->
+      
+      <header class="masthead">
+        <div class="overlay">
+          <div class="container">
+            <h1 class="display-1 text-white">Genres Movie Analytic</h1>
+            <h2 class="display-4 text-white">Search of your movie</h2>
+            <form action="/show">
+              <input type="search" name="search" id="mySearch" placeholder="Serach..">
+              <div class="form-group">
+                <label for="select_bar">Type</label>
+                <select class="form-control show-tick" id="select_bar" name="type_">
+                  <option value="production">PRODUCTION</option>
+                  <option value="years">YEARS</option>
+                  <option value="director">DIRECTOR</option>
+                </select>
+              </div>
+            </div>
+            <!-- Trigger the modal with a button -->
+            <button type="submit" class="btn btn-info btn-lg">Sent</button>
+          </button> <!-- data-toggle="modal" data-target="#myModal" -->
+          <!-- Modal -->
+        </div>
+      </div>
+    </header>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  </body>
+  
+  </html>
+  
