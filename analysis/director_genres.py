@@ -2,8 +2,10 @@
 import json
 import pandas as pd
 import pygal
+import os
 from pygal.style import NeonStyle
 
+print(os.getcwd())
 with open('check.json') as genres:
     DATA = json.load(genres) #import json file
 
@@ -58,5 +60,5 @@ def plotgraph(name):
     pie_director.title = 'Static Genres of '+name+' directing.(%)'
     for i in genres:
         pie_director.add(i, round(genres[i]/count*100, 3))
-    pie_director.render_to_file('director_genres.svg')
-plotgraph(input())
+    pie_director.render_to_file('../web_project/static/svg/director_genres.svg')
+

@@ -45,5 +45,5 @@ def plotgraph(year, check):
     for i in memory:
         check1 += memory[i]*count1/check*100
         plot_bar.add(i, round(memory[i]*count1/check*100, 3))
-    plot_bar.render_to_file('genres_production.svg')
+    plot_bar.render_to_file('static/svg/genres_production.svg')
 plotgraph(input(), 0)

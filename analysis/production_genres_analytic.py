@@ -48,5 +48,5 @@ def plotgraph(check, count):
         count += int(mem[check][i])
     for i in mem[check].keys():
         pie_chart.add(DATA[str(i)], int(mem[check][i])/count*100)
-    pie_chart.render_to_file('PieGraph_genresProduction.svg')
+    pie_chart.render_to_file('static/svg/PieGraph_genresProduction.svg')
 plotgraph(input(), 0)

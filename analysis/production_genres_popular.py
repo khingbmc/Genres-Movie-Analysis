@@ -29,5 +29,5 @@ def plotgraph(name):
     chart.title = name+' Static Popular Genres (%)'
     chart.x_labels = map(str, [x for x in genres_pop.keys()])
     chart.add('Popular', [genres_pop[x]/count*100 for x in genres_pop.keys()])
-    chart.render_to_file('popularity_of_genres_for_production.svg')
+    chart.render_to_file('static/svg/popularity_of_genres_for_production.svg')
 plotgraph(input())
