@@ -17,16 +17,6 @@
   <link href="{{ url_for('static', filename='css/one-page-wonder.css') }}" rel="stylesheet">
   <!-- boom csss-->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/boom.css') }}">
-  <style type="text/css">
-    .masthead {
-      background: url('../img/bg_head.jpg') repeat center fixed;  /*fixed*/
-      height: 150%;
-      -webkit-background-size: auto;
-      -moz-background-size: auto;
-      /*  background-size: 100%;
-      *//*  -o-background-size: auto;
-      */}
-    </style>
   </head>
   
   <body>
@@ -54,7 +44,10 @@
       </div>
     </nav>
     <!-- END NAVBAR -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">SHOW Genres Static</button>
+
+  <header class="masthead"> 
+    <div class="overlay">
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">SHOW Genres Static</button>
      <!-- data-toggle="modal" data-target="#myModal" -->
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -77,15 +70,6 @@
     </div>
   </div>
 </button>
-
-  <header class="masthead"> 
-    <div class="overlay">
-      <div class="bg_mid">
-        
-        
-        
-        
-      </div>
       
       
     </div>
