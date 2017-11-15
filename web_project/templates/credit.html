@@ -18,14 +18,10 @@
   <!-- boom csss-->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/boom.css') }}">
   <style type="text/css">
-  .masthead {
-  background: url('../img/bg_head.jpg') repeat center fixed;  /*fixed*/
-  height: 150%;
-  -webkit-background-size: auto;
-  -moz-background-size: auto;
-/*  background-size: 100%;
-*//*  -o-background-size: auto;
-*/}
+  @media (min-width: 992px) {
+    header.masthead>.overlay {
+      padding: 22.5rem 0;}
+    }
   </style>
 </head>
 
