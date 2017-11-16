@@ -22,9 +22,8 @@
     header.masthead>.overlay {
       padding: 11.1rem 0;}}
     </style>
+
   </head>
-
-
 
 
   <body>
@@ -94,10 +93,14 @@
 
 
 <!-- Bootstrap core JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.jss"></script>
+<script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{ url_for('static', filename='vendor/jquery/jquery.fullpage.min.js')}}"></script>
 <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script type="text/javascript">
+  FastClick.attach(document.body);
+
   $('#fullpage').fullpage();
 </script>
 
