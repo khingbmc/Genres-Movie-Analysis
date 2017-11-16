@@ -30,7 +30,7 @@ header.masthead {
 }
 
 header.masthead>.overlay {
-  padding: 10rem 0;
+  padding: 20rem 0;
   text-align: center;
   background: rgba(0, 0, 0, 0.6);
   height: 100%;
@@ -38,11 +38,10 @@ header.masthead>.overlay {
 
 @media (min-width: 992px) {
   header.masthead>.overlay {
-    padding: 10rem 0;
+    padding: 20rem 0;
     height: 100%;
 
   }
-}
 
 /*.carousel{
   margin-bottom: 30%;
