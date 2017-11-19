@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
   
   <title>Genres Movie Analytic</title>
-  
+
   <!-- Bootstrap core CSS -->
   <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
   
@@ -18,27 +18,30 @@
   <!-- boom csss-->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/boom.css')}}">
   <style type="text/css">
-    @media (min-width: 992px) {
-      header.masthead>.overlay {
-        padding: 11.1rem 0;}}
-      </style>
-    </head>
-    <body>
-      
+  @media (min-width: 992px) {
+    header.masthead>.overlay {
+      padding: 11.1rem 0;}}
+    </style>
+
+</head>
+
+
+<body>
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
           <a class="navbar-brand" href="/">Genres Movie Analytic</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <!-- <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li> -->
+                    <a class="nav-link" href="index.html">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="/about">About</a>
               </li>
@@ -53,35 +56,55 @@
         </div>
       </nav>
       <!-- END NAVBAR -->
-      
-      <header class="masthead">
-        <div class="overlay">
-          <div class="container">
-            <h1 class="display-1 text-white">Genres Movie Analytic</h1>
-            <h2 class="display-4 text-white">Search of your movie</h2>
-            <form action="/show">
-              <input type="search" name="search" id="mySearch" placeholder="Serach..">
-              <div class="form-group">
-                <label for="select_bar">Type</label>
-                <select class="form-control show-tick" id="select_bar" name="type_">
-                  <option value="production">PRODUCTION</option>
-                  <option value="years">YEARS</option>
-                  <option value="director">DIRECTOR</option>
-                </select>
+      <div id="fullpage">
+        <section>
+          <header class="masthead">
+            <div class="overlay">
+              <div class="container">
+                <h1 class="display-1 text-white">Genres Movie Analytic</h1>
+                <h2 class="display-4 text-white">Search of your movie</h2>
+                <form action="/show">
+                  <input type="search" name="search" id="mySearch" placeholder="Serach..">
+                  <div class="form-group">
+                    <label for="select_bar">Type</label>
+                    <select class="form-control show-tick" id="select_bar" name="type_">
+                      <option value="production">PRODUCTION</option>
+                      <option value="years">YEARS</option>
+                      <option value="director">DIRECTOR</option>
+                    </select>
+                  </div>
+                  <!-- form-group -->
               </div>
+              <!-- container -->
+              <!-- Trigger the modal with a button -->
+              <button type="submit" class="btn btn-info btn-lg">Sent</button>
+              </button>
+              <!-- data-toggle="modal" data-target="#myModal" -->
+              <!-- Modal -->
             </div>
-            <!-- Trigger the modal with a button -->
-            <button type="submit" class="btn btn-info btn-lg">Sent</button>
-          </button> <!-- data-toggle="modal" data-target="#myModal" -->
-          <!-- Modal -->
-        </div>
+            <!-- overlay -->
+          </header>
+          <!-- masthead -->
+        </section>
+        <section>
+          <h1>hello bitch Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+        </section>
       </div>
-    </header>
-    
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  </body>
-  
-  </html>
-  
+      <!-- fullpage -->
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/jquery.fullpage.min.js')}}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script type="text/javascript">
+  $('#fullpage').fullpage();
+</script>
+
+
+</body>
+
+</html>
