@@ -4,14 +4,14 @@ import numpy as np
 import pygal
 from pygal.style import NeonStyle
 """Project PSIT"""
-with open('check.json') as genres:
+with open('..\\check.json') as genres:
     DATA = json.load(genres) #import json file
 
 
 def read():
     """Read file csv"""
-    return pd.read_csv('..\\dataset\\tmdb_5000_movies.csv'),\
-    pd.read_csv('..\\dataset\\tmdb_5000_credits.csv')
+    return pd.read_csv('..\\..\\dataset\\tmdb_5000_movies.csv'),\
+    pd.read_csv('..\\..\\dataset\\tmdb_5000_credits.csv')
 
 
 def analyse():
@@ -49,5 +49,5 @@ def plotgraph(check):
         count += int(mem[check][i])
     for i in mem[check].keys():
         pie_chart.add(DATA[str(i)], int(mem[check][i])/count*100)
-    pie_chart.render_to_file('static/svg/director_genres.svg')
-
+    pie_chart.render_to_file('..\\..\\web_project\\static\\svg\\%s\\%s.svg'%(check.replace(' ', '_'), check.replace(' ', '_')))
+plotgraph(input())

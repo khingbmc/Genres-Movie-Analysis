@@ -5,7 +5,7 @@ from pygal.style import NeonStyle
 from functools import reduce
 
 def read():
-    return pd.read_csv('..\\dataset\\tmdb_5000_movies.csv')
+    return pd.read_csv('..\\..\\dataset\\tmdb_5000_movies.csv')
 
 
 def analyse(name, genres_pop):
@@ -28,6 +28,6 @@ def plotgraph(name):
     chart = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle)
     chart.title = name+' Static Popular Genres (%)'
     chart.x_labels = map(str, [x for x in genres_pop.keys()])
-    chart.add('Popular', [genres_pop[x]/count*100 for x in genres_pop.keys()])
-    chart.render_to_file('static/svg/popular_d.svg')
-
+    chart.add('Popular', [round(genres_pop[x]/count*100, 3) for x in genres_pop.keys()])
+    chart.render_to_file('..\\..\\web_project\\static\\svg\\%s\\%s_genrespopular.svg'%(name.replace(' ', '_'), name.replace(' ', '_')))
+plotgraph(input())
