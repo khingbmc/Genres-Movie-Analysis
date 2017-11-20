@@ -36,10 +36,3 @@ label{
     width: 800px;
     height: 800px;
 }
-#fullpage {
-    height: 100vh;
-    overflow: hidden;
-}
-#fullpage section {
-    height: 100vh;
-}
