@@ -39,5 +39,9 @@ def show():
     else:
         return render_template('show_production.html')
 
+@app.route('/marvel')
+def marvel():
+    return render_template('marvel.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

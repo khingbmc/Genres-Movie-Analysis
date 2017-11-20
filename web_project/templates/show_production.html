@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -21,7 +21,7 @@
 </head>
 
 <body>
-
+  
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -50,34 +50,42 @@
       <div class="row justify-content-center">
         <div class="col-sm-2 cardimg">
           <a href="/show">
-            <div class="acard">
-              <img src="{{ url_for('static', filename='img/marvel.jpg') }}" class="img_incard">
-              <p>Marvel</p>
-            </div>
+            <form action="marvel.html">
+              <div class="acard">
+                <img src="{{ url_for('static', filename='img/Columbia.jpg') }}" class="img_incard">
+                <p>Columbia Pictures</p>
+              </div>
+            </form>
+          </a>
+        </div>
+        <div class="col-sm-2 cardimg">
+          <a href="/marvel">
+            <form action="/marvel.html">
+              <div class="acard">
+                <img src="{{ url_for('static', filename='img/marvel.jpg') }}" class="img_incard">
+                <p>Marvel</p>
+              </div>
+            </form>
           </a>
         </div>
         <div class="col-sm-2 cardimg">
           <a href="/show">
-            <div class="acard">
-              <img src="{{ url_for('static', filename='img/marvel.jpg') }}" class="img_incard">
-              <p>Marvel</p>
-            </div>
+            <form action="dc.html">
+              <div class="acard">
+                <img src="{{ url_for('static', filename='img/DCjpg.jpg') }}" class="img_incard">
+                <p>DC</p>
+              </div>
+            </form>
           </a>
         </div>
         <div class="col-sm-2 cardimg">
           <a href="/show">
-            <div class="acard">
-              <img src="{{ url_for('static', filename='img/marvel.jpg') }}" class="img_incard">
-              <p>Marvel</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-2 cardimg">
-          <a href="/show">
-            <div class="acard">
-              <img src="{{ url_for('static', filename='img/marvel.jpg') }}" class="img_incard">
-              <p>Marvel</p> 
-            </div>
+            <form action="disney.html">
+              <div class="acard">
+                <img src="{{ url_for('static', filename='img/disney.jpg') }}" class="img_incard">
+                <p>Walt Disney</p> 
+              </div>
+            </form>
           </a>
         </div>
       </div>
@@ -86,7 +94,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
+  
 </body>
 
 </html>
