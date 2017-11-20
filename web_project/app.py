@@ -42,6 +42,15 @@ def show():
 @app.route('/marvel')
 def marvel():
     return render_template('marvel.html')
+@app.route('/dc')
+def dc():
+    return render_template('dc.html')
+@app.route('/columbia')
+def columbia():
+    return render_template('columbia.html')
+@app.route('/disney')
+def disney():
+    return render_template('disney.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
