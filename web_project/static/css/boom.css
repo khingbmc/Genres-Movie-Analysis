@@ -2,6 +2,13 @@
 *{
     font-family: 'PT Sans', sans-serif;
 }
+.cardimg>a{
+    text-decoration: none !important;
+    color: #fff
+}
+.cardimg>a:hover{
+    color: #000;
+}
 input[type=search] {
     width: 250px;
     box-sizing: border-box;
@@ -36,7 +43,11 @@ label{
     width: 800px;
     height: 800px;
 }
+.allimg{
+    /*margin-left: 40%;*/
+}
 .cardimg{
+    margin: 2px 0px 2px 0px;
     /*width: 300px;*/
     /*height: 450px;*/
     /*padding: 2px;*/
