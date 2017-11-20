@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -45,42 +45,52 @@
     </div>
   </nav>
   <!-- END NAVBAR -->
-      <header class="masthead"> 
-        <div class="overlay">
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-1">SHOW Genres Static</button>
-          <!-- data-toggle="modal" data-target="#myModal-1" -->
-          <!-- Modal -->
-          <div class="modal fade" id="myModal-1" role="dialog">
-            <div class="modal-dialog">
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title">Modal Header</h4>
-                  <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-                </div>
-                <div class="modal-body">
-                  <object type="image/svg+xml" data="{{ url_for('static', filename='svg/director_genres.svg')+'?q=a' }}">
-                    Your browser does not support SVG
-                  </object>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
+  <header class="masthead"> 
+    <div class="overlay">
+      <div class="row justify-content-center">
+        <div class="col-sm-2 cardimg">
+          <a href="/show">
+            <div class="acard">
+              <img src="{{ url_for('static', filename='img/directors/james.cameron.jpg') }}" class="img_incard">
+              <p>James Cameron</p>
             </div>
-          </div>
-        </button>
-      
+          </a>
+        </div>
+        <div class="col-sm-2 cardimg">
+          <a href="/show">
+            <div class="acard">
+              <img src="{{ url_for('static', filename='img/directors/james.cameron.jpg') }}" class="img_incard">
+              <p>James Cameron</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-2 cardimg">
+          <a href="/show">
+            <div class="acard">
+              <img src="{{ url_for('static', filename='img/directors/james.cameron.jpg') }}" class="img_incard">
+              <p>James Cameron</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-2 cardimg">
+          <a href="/show">
+            <div class="acard">
+              <img src="{{ url_for('static', filename='img/directors/james.cameron.jpg') }}" class="img_incard">
+              <p>James Cameron</p> 
+            </div>
+          </a>
+        </div>
       </div>
-    </header>
-    <div height="100%" weight="100%">
-      <object type="image/svg+xml" data="{{ url_for('static', filename='svg/popular_d.svg')+'?q=a' }}">
-        Your browser does not support SVG
-      </object>
     </div>
-<!-- Bootstrap core JavaScript -->
-<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  </header>
+  <div height="100%" weight="100%">
+    <object type="image/svg+xml" data="{{ url_for('static', filename='svg/popular_d.svg')+'?q=a' }}">
+      Your browser does not support SVG
+    </object>
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
 
