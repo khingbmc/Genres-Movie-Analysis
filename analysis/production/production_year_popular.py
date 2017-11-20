@@ -17,7 +17,7 @@ def analyse(production, year, mem):
     for idx, data in df_movie.iterrows():
         check_year = str(data.release_date)[-1:-5:-1][::-1]
         for i in json.loads(data.production_companies):
-            if i['name'] == production and year == int(check_year):
+            if i['name'] == production and 0 <= year-int(check_year) <= 5:
                 for i in json.loads(data.genres):
                     if i['name'] not in mem:
                         mem[i['name']] = float(data.popularity)
@@ -31,9 +31,9 @@ def analyse(production, year, mem):
 def plotgraph(production, year):
     """This function is plotgraph"""
     memory, count = analyse(production, year, {})
-    pie = pygal.Pie(fill=True, interpolate='cubic', style=CleanStyle)
-    pie.title = production+' genres popularity static in '+str(year)
-    for i in memory.keys():
-        pie.add(i, round(memory[i]/count*100, 3))
-    pie.render_to_file('..\\..\\web_project\\static\\svg\\%s\\%s_%s.svg'%(production.replace(' ', '_'), production.replace(' ', '_'), year))
+    bar = pygal.Bar(fill=True, interpolate='cubic', style=CleanStyle)
+    bar.title = production+' genres popularity static in '+str(year-5)+'-'+str(year)
+    for i in memory.keys(): 
+        bar.add(i, round(memory[i]/count*100, 3))
+    bar.render_to_file('..\\..\\web_project\\static\\svg\\%s\\%s_%s.svg'%(production.replace(' ', '_'), production.replace(' ', '_'), year))
 plotgraph(input(), int(input()))
