@@ -27,6 +27,10 @@ def credit():
 def contact():
     return render_template('contact.html')
 
+@app.route('/mainshow')
+def mainshow():
+    return render_template('mainshow_director.html')
+
 @app.route('/show', methods=['GET'])
 def show():
     search = request.args.get('search', None)
