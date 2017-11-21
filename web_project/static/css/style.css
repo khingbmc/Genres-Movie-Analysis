@@ -16,11 +16,8 @@
     transition: width 0.4s ease-in-out;
     */
  
-    .bg_mid{
-        background: white;  /*fixed*/
-        height: 100%;
-        -webkit-background-size: auto;
-        -moz-background-size: auto;
-        background-size: 100%;
-        -o-background-size: auto;
+    
+    #biology{
+        color: red;
+        font: #ffffff
     }
