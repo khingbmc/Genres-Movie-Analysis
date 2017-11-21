@@ -61,3 +61,8 @@ section:nth-child(2){
   height: 100vh;
   background-color: #ff0;
 }
+
+.svgfile{
+  height: 85vh;
+  width: cover;
+}
