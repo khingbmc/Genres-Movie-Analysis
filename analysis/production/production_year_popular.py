@@ -15,17 +15,11 @@ def analyse(production, year, mem):
     count = 0
     df_movie = read()
     for idx, data in df_movie.iterrows():
-        check_year = str(data.release_date)[-1:-5:-1][::-1]
         for i in json.loads(data.production_companies):
-            if i['name'] == production and 0 <= year-int(check_year) <= 5:
-                for i in json.loads(data.genres):
-                    if i['name'] not in mem:
-                        mem[i['name']] = float(data.popularity)
-                        count += float(data.popularity)
-                    else:
-                        mem[i['name']] += float(data.popularity)
-                        count += float(data.popularity)
-    return mem, count
+            if i['name'] == production:
+                mem[str(data.original_title)] = int(data.revenue)-int(data.budget)
+    print(mem)
+
                     
 
 def plotgraph(production, year):
