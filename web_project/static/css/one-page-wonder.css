@@ -19,7 +19,14 @@
 
   border: 1px solid transparent;
 }
-
+header.masthead#marvel{
+  background: url('../img/marvel_bg.jpg') repeat center center fixed;  /*fixed*/
+  height: 100%;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: 100%;
+  -o-background-size: auto;
+}
 
 header.masthead {
 
@@ -80,7 +87,10 @@ section:nth-child(4){
   height: 85vh;
   width: cover;
 }
+<<<<<<< HEAD
 .filefix{
   text-align: center;
   padding: 1.5rem 0;
 }
+=======
+>>>>>>> 2a8831fa45147d8c0aa04dbcb182b9ce376a79d4
