@@ -4,10 +4,11 @@
 }
 .cardimg>a{
     text-decoration: none !important;
-    color: #fff
+    color: #fff;
+    transition: 0.3s;
 }
 .cardimg>a:hover{
-    color: #000;
+    color: #232323;
 }
 input[type=search] {
     width: 250px;
