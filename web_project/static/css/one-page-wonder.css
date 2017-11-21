@@ -19,7 +19,14 @@
 
   border: 1px solid transparent;
 }
-
+header.masthead#marvel{
+  background: url('../img/marvel_bg.jpg') repeat center center fixed;  /*fixed*/
+  height: 100%;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: 100%;
+  -o-background-size: auto;
+}
 
 header.masthead {
 
