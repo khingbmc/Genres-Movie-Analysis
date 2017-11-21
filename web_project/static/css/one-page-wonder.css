@@ -50,7 +50,7 @@ header.masthead>.overlay {
 }*/
 #fullpage {
   height: 100vh;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 #fullpage section{
   height: 100vh;
