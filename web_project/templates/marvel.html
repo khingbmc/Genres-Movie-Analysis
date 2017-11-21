@@ -17,6 +17,9 @@
         header.masthead>.overlay {
             padding: 22.5rem 0;}
         }
+        #history{
+
+        }
     </style>
 </head>
 
@@ -31,11 +34,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                      <!-- <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home
-                          <span class="sr-only">(current)</span>
-                        </a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About</a>
                     </li>
@@ -50,17 +48,34 @@
         </div>
     </nav>
     <!-- END NAVBAR -->
-
-    <header class="masthead" id="marvel">
-        <div class="overlay">
-            <div class="container">
-                    <div style= "background-color: transparent;">
-                            <h1 style="color:rgb(255, 255, 255)">Biography of MARVEL STUDIOS</h1>
-                            <h4 class="col-sm-8"style="color:rgb(192, 192, 192)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut illum, unde nesciunt illo quas eveniet. Quam natus maiores recusandae, iusto, perspiciatis saepe quidem aperiam consectetur sapiente odit dolores sequi.</h4>
+    <section> <!-- history -->
+        <header class="masthead">
+            <div class="overlay">
+                <div class="container">
+                    <div id="history" class="row"> <!-- history.text -->
+                        <div>
+                            <h1 class="col-md-1">history</h1>
+                            <p class="col-md-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
-            </div> <!-- container -->
-        </div> <!-- overlay -->
-    </header> <!-- masthead -->
+                    </div><!-- end.history.text -->
+                </div> <!-- container -->
+            </div> <!-- overlay -->
+        </header> <!-- masthead -->
+    </section><!-- history -->
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
     <!-- Bootstrap core JavaScript -->
     <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

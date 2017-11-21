@@ -57,7 +57,7 @@ header.masthead>.overlay {
 }*/
 #fullpage {
   height: 100vh;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 #fullpage section{
   height: 100vh;
@@ -67,4 +67,9 @@ section:nth-child(2){
   padding: 0;
   height: 100vh;
   background-color: #ff0;
+}
+
+.svgfile{
+  height: 85vh;
+  width: cover;
 }
