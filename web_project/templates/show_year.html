@@ -22,9 +22,9 @@
   <!-- for graph padding -->
   <style>
   header.masthead>.overlay {
-      padding: 1.5rem 0
+    padding: 1.5rem 0
   }
-  </style>
+</style>
 
 </head>
 
@@ -53,17 +53,17 @@
     </div>
   </nav>
   <!-- END NAVBAR -->
-   
-    <div id="fullpage">
-      <section>
-        <header class="masthead">
+
+  <div id="fullpage">
+    <section>
+      <header class="masthead">
         <div class="overlay">
-            <!-- <div class="col-md-6"> -->
-          <object class="svgfile" type="image/svg+xml" data="{{ url_for('static', filename='svg/year.svg')+'?q=a' }}">
-                    Your browser does not support SVG
-          </object>
+          <!-- <div class="col-md-6"> -->
+            <object class="svgfile" type="image/svg+xml" data="{{ url_for('static', filename='svg/year.svg')+'?q=a' }}">
+              Your browser does not support SVG
+            </object>
             <!-- </div> -->
-        </div> <!-- overlay -->
+          </div> <!-- overlay -->
         </header> <!-- masthead -->
       </section> <!-- section 1 -->
       <section>
@@ -75,7 +75,12 @@
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </section> <!-- section 2 -->
-    </div> <!-- id full page -->
+      <section>
+        <object class="svgfile" type="image/svg+xml" data="{{ url_for('static', filename='svg/year/1950.svg')+'?q=a' }}">
+        Your browser does not support SVG
+        </object>
+    </section> <!-- section 3 -->
+  </div> <!-- id full page -->
   <!-- Bootstrap core JavaScript -->
   <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
