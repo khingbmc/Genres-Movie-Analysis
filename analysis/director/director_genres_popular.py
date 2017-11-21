@@ -39,7 +39,7 @@ def analyse(name):
 
 def plotgraph(name_director):
     """function plot graph"""
-    popular_genres, count = analyse(name_director), 0
+    popular_genres, count = sorted(analyse(name_director)), 0
     chart = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle)
     chart.title = name_director+' Static Popular Genres for his Directing (%)'
     for i in popular_genres.keys():

@@ -2,6 +2,14 @@
 *{
     font-family: 'PT Sans', sans-serif;
 }
+.cardimg>a{
+    text-decoration: none !important;
+    color: #fff;
+    transition: 0.3s;
+}
+.cardimg>a:hover{
+    color: #232323;
+}
 input[type=search] {
     width: 250px;
     box-sizing: border-box;
@@ -36,10 +44,32 @@ label{
     width: 800px;
     height: 800px;
 }
-#fullpage {
-    height: 100vh;
-    overflow: hidden;
+.allimg{
+    /*margin-left: 40%;*/
 }
-#fullpage section {
-    height: 100vh;
+.cardimg{
+    margin: 2px 0px 2px 0px;
+    /*width: 300px;*/
+    /*height: 450px;*/
+    /*padding: 2px;*/
+    padding-top: 20px;
+    /*background-color: #fff;*/
+    /*border: 2px solid #232323;*/
+    color: #fff;
+    border-radius: 15px;
+    transition: 0.3s;
+    font-size: 30px;
+}
+.cardimg:hover{
+    color: #000;
+    background-color: #fff;
+}
+.img_incard{
+    width: 200px;
+    height: 200px;
+}
+.acrad{
+    width: 300px;
+    height: 350px;
+    background-color: blue;
 }
