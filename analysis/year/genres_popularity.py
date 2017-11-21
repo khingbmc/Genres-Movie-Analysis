@@ -3,13 +3,13 @@ import json
 import pygal
 from pygal.style import NeonStyle
 
-with open('check.json') as genres:
+with open('..\\..\\web_project\\check.json') as genres:
     DATA = json.load(genres) #import json file
 
 def read():
     """Read file csv"""
-    return pd.read_csv('..\\dataset\\tmdb_5000_movies.csv'),\
-    pd.read_csv('..\\dataset\\tmdb_5000_credits.csv')
+    return pd.read_csv('..\\..\\dataset\\tmdb_5000_movies.csv'),\
+    pd.read_csv('..\\..\\dataset\\tmdb_5000_credits.csv')
 
 
 def analyse(year):
@@ -42,8 +42,11 @@ def plotgraph(year, check):
     plot_bar.title = 'Genres Satic in '+year
     for i in memory:
         check += memory[i]*count1
-    for i in memory:
-        check1 += memory[i]*count1/check*100
-        plot_bar.add(i, round(memory[i]*count1/check*100, 3))
-    plot_bar.render_to_file('../web_project/static/svg/year.svg')
-
+    check_mem = [memory[x] for x in memory.keys()]
+    check_mem = sorted(check_mem)
+    for j in check_mem:
+        for i in memory:
+            if memory[i] == j:
+                plot_bar.add(i, round(memory[i]*count1/check*100, 3))
+    plot_bar.render_to_file('../../web_project/static/svg/year/%s.svg'%(str(year)))
+plotgraph(input(), 0)
