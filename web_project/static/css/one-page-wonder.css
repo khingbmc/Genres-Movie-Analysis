@@ -87,9 +87,35 @@ section:nth-child(5){
   margin: 0;
   padding: 0;
   height: 100vh;
+  background-color: #000;
+  color: #EFECEC;
+}
+section:nth-child(6){
+  margin: 0;
+  padding: 0;
+  height: 100vh;
   background-color: #EFECEC;
 }
-
+section:nth-child(7){
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #000;
+  color: #EFECEC;
+}
+section:nth-child(8){
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #EFECEC;
+}
+section:nth-child(9){
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #000;
+  color: #EFECEC;
+}
 .svgfile{
   height: 85vh;
   width: cover;
