@@ -52,5 +52,17 @@ def columbia():
 def disney():
     return render_template('disney.html')
 
+@app.route('/nolan')
+def nolan():
+    return render_template('christopher.html')
+@app.route('/bay')
+def bay():
+    return render_template('michael.html')
+@app.route('/steven')
+def steven():
+    return render_template('steven.html')
+@app.route('/toro')
+def toro():
+    return render_template('guillermo.html')
 if __name__ == '__main__':
     app.run(debug=True)
