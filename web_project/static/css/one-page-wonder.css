@@ -54,15 +54,33 @@ header.masthead>.overlay {
 }
 #fullpage section{
   height: 100vh;
+  overflow: hidden;
 }
 section:nth-child(2){
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #ff0;
+  background-color: #EFECEC;
+}
+section:nth-child(3){
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #000;
+  color: #EFECEC;
+}
+section:nth-child(4){
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #EFECEC;
 }
 
 .svgfile{
   height: 85vh;
   width: cover;
+}
+.filefix{
+  text-align: center;
+  padding: 1.5rem 0;
 }

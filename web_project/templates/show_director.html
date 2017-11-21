@@ -45,6 +45,8 @@
     </div>
   </nav>
   <!-- END NAVBAR -->
+  <div id="fullpage">
+    <section>
   <header class="masthead"> 
     <div class="overlay">
       <div class="row justify-content-center">
@@ -82,12 +84,30 @@
         </div>
       </div>
     </div>
-  </header>
-  <div height="100%" weight="100%">
-    <object type="image/svg+xml" data="{{ url_for('static', filename='svg/popular_d.svg')+'?q=a' }}">
+  </header> <!-- masthead -->
+</section> <!-- section 1 -->
+
+
+  <section>
+    <div class="filefix">
+    <object class="svgfile" type="image/svg+xml" data="{{ url_for('static', filename='svg/popular_d.svg')+'?q=a' }}">
       Your browser does not support SVG
     </object>
-  </div>
+    </div>
+  </section> <!-- section2 -->
+  <section>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+  </section> <!-- section3 -->
+
+  <section>
+    <h1>BITCH</h1>
+  </section> <!-- section4 -->
+</div> <!-- fullpage -->
   <!-- Bootstrap core JavaScript -->
   <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
