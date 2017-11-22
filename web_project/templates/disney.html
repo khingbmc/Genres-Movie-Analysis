@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>DISNEY</title>
+  <title>Walt Disney</title>
   <!-- Bootstrap core CSS -->
   <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <!-- Custom styles for this template -->
@@ -65,12 +65,16 @@
         </header> <!-- masthead -->
       </section><!-- section1 -->
       <section><!-- section2 --><!-- graph-->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="row margin-b-40">
+          <div class="col-md-6">
+            <div class="margin-b-20">
+              <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/production/Walt_Disney/Walt_Disney.svg')}}"></object>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/production/Walt_Disney/Walt_Disney_genrespopular.svg')}}"></object>
+          </div>
+        </div>
       </section><!-- section2 -->
       <section style="background-color: #232323;"><!-- section3 --><!-- slide graph -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
