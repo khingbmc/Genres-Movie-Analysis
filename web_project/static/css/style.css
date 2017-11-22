@@ -21,3 +21,8 @@
         color: red;
         font: #ffffff
     }
+
+    .img-responsive{
+        height: 40vh;
+        width: 40vh;
+    }
