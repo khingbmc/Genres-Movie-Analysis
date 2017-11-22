@@ -42,14 +42,14 @@ def analyse(director_name, year, mem, count):
                 else:
                     mem[i['name']] += float(data.popularity)
                     count += float(data.popularity)
-    print(mem, count)
+    return mem, count
 
-analyse(input(), int(input()), {}, 0)
-'''def plotgraph(name):
+def plotgraph(name, year):
     """function plotgraph"""
-    pie_director = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle)
-    genres, count = analyse(name, 0)
-    pie_director.title = 'Static Genres of '+name+' directing.(%)'
-    for i in genres:
-        pie_director.add(i, round(genres[i]/count*100, 3))
-    pie_director.render_to_file('../web_project/static/svg/director_genres.svg')'''
+    pie_director = pygal.Pie(fill=True, interpolate='cubic', style=NeonStyle)
+    director, count = analyse(name, year, {}, 0)
+    pie_director.title = 'Static Genres of '+name+' directing in %s-%s.'%(str(year-5), str(year))
+    for i in director:
+        pie_director.add(i, round(director[i]/count*100, 3))
+    pie_director.render_to_file('../../web_project/static/svg/director/%s/%s_%s.svg'%(name, name.replace(' ', '_'), str(year)))
+plotgraph(input(), int(input()))
