@@ -26,3 +26,12 @@
         height: 40vh;
         width: 40vh;
     }
+
+    .graph-size {
+    width: 100vh;
+    height: 70%;
+    min-width: 300px;
+    margin-left: 50vh;
+    margin-top: 15vh;
+    color: red;
+   }
