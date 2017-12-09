@@ -21,7 +21,7 @@ def analyse(year):
     check, popularity, count = {}, 0, 0
     for idx, data in df_1.iterrows():
         count += 1
-        if str(data.release_date)[len(str(data.release_date))-4:] == year:
+        if str(data.release_date)[len(str(data.release_date))-4:] == str(int(year)+5):
            check_genres = json.loads(data.genres)
            for i in check_genres:
             if i['name'] not in check:
@@ -39,10 +39,17 @@ def plotgraph(year, check):
     """This function is Plot graph"""
     memory, count1 = analyse(year)
     plot_bar, check1 = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle), 0
-    plot_bar.title = 'Genres Satic in '+year
+    plot_bar.title = 'Genres Satic in '+year+'-'+str(int(year)+5)
     for j in memory:
         check1 += float(memory[j])
     for i in memory:
-        plot_bar.add(i, round(memory[i]*check1*(185.185185)/count1*100, 3))
+        if memory[i] not in check:
+            check[memory[i]] = [i]
+        else:
+            check[memory[i]].append(i)
+    keys = sorted(check.keys())
+    for i in keys:
+        for j in check[i]:
+            plot_bar.add(j, round(i*100/check1, 2))
     plot_bar.render_to_file('../../web_project/static/svg/year/%s.svg'%(str(year)))
-plotgraph(input(), 0)
+plotgraph(input(), {})
