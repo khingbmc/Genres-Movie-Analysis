@@ -46,37 +46,41 @@
   </nav>
   <!-- END NAVBAR -->
   <div id="fullpage">
-    <section>
-  <header class="masthead"> 
-    <div class="overlay">
+  <section>
+    <header class="masthead"> 
+      <div class="overlay">
 
-    </div> <!-- overlay -->
-  </header> <!-- masthead -->
-</section> <!-- section 1 -->
+      </div> <!-- overlay -->
+    </header> <!-- masthead -->
+  </section> <!-- section 1 -->
 
 
   <section>
-    <div class="filefix">
-    <object class="svgfile" type="image/svg+xml" data="{{ url_for('static', filename='svg/popular_d.svg')+'?q=a' }}">
-      Your browser does not support SVG
-    </object>
+    <div class="row margin-b-40">
+      <div class="col-md-6">
+        <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Christopher_Nolan/Christopher_Nolan_2005.svg')}}"></object>
+      </div>
     </div>
   </section> <!-- section2 -->
   <section>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+    <div class="row margin-b-40">
+      <div class="col-md-6">
+        <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Christopher_Nolan/Christopher_Nolan_2015.svg')}}"></object>
+      </div>
+    </div>
   </section> <!-- section3 -->
-
+    <div class="row margin-b-40">
+      <div class="col-md-6">
+        <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Christopher_Nolan/director_genres.svg')}}"></object>
+      </div>
+    </div>
   <section>
-    <h1>BITCH</h1>
+    <div class="row margin-b-40">
+      <div class="col-md-6">
+        <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Christopher_Nolan/popular_d.svg')}}"></object>
+      </div>
+    </div>
   </section> <!-- section4 -->
-  <section>
-    <h1>FUCK YEAH!</h1>
-  </section> <!-- section 5 -->
 </div> <!-- fullpage -->
   <!-- Bootstrap core JavaScript -->
   <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
