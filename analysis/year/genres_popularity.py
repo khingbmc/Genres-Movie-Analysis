@@ -40,13 +40,9 @@ def plotgraph(year, check):
     memory, count1 = analyse(year)
     plot_bar, check1 = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle), 0
     plot_bar.title = 'Genres Satic in '+year
+    for j in memory:
+        check1 += float(memory[j])
     for i in memory:
-        check += memory[i]*count1
-    check_mem = [memory[x] for x in memory.keys()]
-    check_mem = sorted(check_mem)
-    for j in check_mem:
-        for i in memory:
-            if memory[i] == j:
-                plot_bar.add(i, round(memory[i]*count1/check*100, 3))
+        plot_bar.add(i, round(memory[i]*check1*(185.185185)/count1*100, 3))
     plot_bar.render_to_file('../../web_project/static/svg/year/%s.svg'%(str(year)))
 plotgraph(input(), 0)

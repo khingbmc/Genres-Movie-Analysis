@@ -5,14 +5,14 @@ import pygal
 import os
 from pygal.style import NeonStyle
 
-with open('check.json') as genres:
+with open('..\\..\\web_project\\check.json') as genres:
     DATA = json.load(genres) #import json file
 
 
 def read():
     """function read file csv"""
-    return pd.read_csv('..\\dataset\\tmdb_5000_movies.csv'),\
-    pd.read_csv('..\\dataset\\tmdb_5000_credits.csv')
+    return pd.read_csv('..\\..\\dataset\\tmdb_5000_movies.csv'),\
+    pd.read_csv('..\\..\\dataset\\tmdb_5000_credits.csv')
 
 
 def memory_director():
@@ -52,12 +52,21 @@ def analyse(director_name, count):
     """genres is static genres of director
     and director_name is input name director"""
 
-def plotgraph(name):
+def plotgraph(name, check, count):
     """function plotgraph"""
-    pie_director = pygal.Pie(fill=True, interpolate='cubic', style=NeonStyle)
+    pie_director = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle)
     genres, count = analyse(name, 0)
     pie_director.title = 'Static Genres of '+name+' directing.(%)'
     for i in genres:
-        pie_director.add(i, round(genres[i]/count*100, 3))
-    pie_director.render_to_file('../web_project/static/svg/director_genres.svg')
-
+        count += genres[i]
+    for i in genres:
+        if genres[i] not in check:
+            check[genres[i]] = [i]
+        else:
+            check[genres[i]].append(i)
+    mem = sorted(check.keys())
+    for i in mem:
+        for j in check[i]:
+            pie_director.add(j, round(i*100/count*2, 2))
+    pie_director.render_to_file('..\\..\\web_project\\static\\svg\\director\\%s\\director_genres.svg'%(name.replace(' ', '_')))
+plotgraph(input(), {}, 0)

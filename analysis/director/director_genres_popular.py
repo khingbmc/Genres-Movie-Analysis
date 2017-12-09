@@ -3,13 +3,13 @@ import json
 import pygal
 from pygal.style import NeonStyle
 
-with open('check.json') as genres:
+with open('..\\..\\web_project\\check.json') as genres:
     DATA = json.load(genres) #import json file
 
 def read():
     """Read file csv"""
-    return pd.read_csv('..\\dataset\\tmdb_5000_movies.csv'),\
-    pd.read_csv('..\\dataset\\tmdb_5000_credits.csv')
+    return pd.read_csv('..\\..\\dataset\\tmdb_5000_movies.csv'),\
+    pd.read_csv('..\\..\\dataset\\tmdb_5000_credits.csv')
 
 def memory_director():
     """function analyse data"""
@@ -37,13 +37,21 @@ def analyse(name):
                     check1[i['name']] = data.popularity
     return check1 #return genres and movie polarity
 
-def plotgraph(name_director):
+def plotgraph(name_director, check):
     """function plot graph"""
-    popular_genres, count = sorted(analyse(name_director)), 0
+    popular_genres, count = analyse(name_director), 0
     chart = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle)
     chart.title = name_director+' Static Popular Genres for his Directing (%)'
     for i in popular_genres.keys():
         count += popular_genres[i]
-    chart.x_labels = map(str, popular_genres.keys())
-    chart.add('popularity', [round(popular_genres[x]/count*100, 4) for x in popular_genres.keys()])
-    chart.render_to_file('../web_project/static/svg/popular_d.svg')
+    for i in popular_genres.keys():
+        if popular_genres[i] not in check:
+            check[popular_genres[i]] = [i]
+        else:
+            check[popular_genres[i]].append(i)
+    keys = sorted(check.keys())
+    for i in keys:
+        for j in check[i]:
+            chart.add(j, round(i/count*100, 4))
+    chart.render_to_file('..\\..\\web_project\\static\\svg\\director\\%s\\popular_d.svg'%(name_director.replace(' ', '_')))
+plotgraph(input(), {})
