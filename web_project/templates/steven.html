@@ -18,6 +18,8 @@
   <link href="{{ url_for('static', filename='css/one-page-wonder.css') }}" rel="stylesheet">
   <!-- boom csss-->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/boom.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+
 </head>
 
 <body>
@@ -52,60 +54,55 @@
         </div> <!-- overlay -->
       </header> <!-- masthead -->
     </section> <!-- section 1 -->
-    <section>
-      <div class="row margin-b-40">
-        <div class="col-md-6">
-          <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/Steven_Spielberg_1975.svg')}}"></object>
-        </div>
-      </div>
-    </section> <!-- section2 -->
-    <section>
-      <div class="row margin-b-40">
-        <div class="col-md-6">
-          <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/Steven_Spielberg_1985.svg')}}"></object>
-        </div>
-      </div>
-    </section> <!-- section3 -->
-    <section>
-      <div class="row margin-b-40">
-        <div class="col-md-6">
-          <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/Steven_Spielberg_1995.svg')}}"></object>
-        </div>
-      </div>
-    </section> <!-- section4 -->
-    <section>
-      <div class="row margin-b-40">
-        <div class="col-md-6">
-          <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/Steven_Spielberg_2005.svg')}}"></object>
-        </div>
-      </div>
-    </section> <!-- section5 -->
-    <section>
-      <div class="row margin-b-40">
-        <div class="col-md-6">
-          <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/Steven_Spielberg_2015.svg')}}"></object>
-        </div>
-      </div>
-    </section> <!-- section6 -->
-    <section>
-      <div class="row margin-b-40">
-        <div class="col-md-6">
-          <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/director_genres.svg')}}"></object>
-        </div>
-      </div>
-    </section> <!-- section7 -->
-      <section>
-        <div class="row margin-b-40">
-          <div class="col-md-6">
-            <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/popular_d.svg')}}"></object>
+
+    <section style="background-color: #232323;"><!-- section2 --><!-- slide graph -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/Steven_Spielberg_1985.svg')}}"></object>
           </div>
-        </div>
-      </section> <!-- section8 -->
-    </div> <!-- fullpage -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+          <div class="carousel-item">
+            <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/Steven_Spielberg_1995.svg')}}"></object>
+          </div>
+          <div class="carousel-item">
+            <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/Steven_Spielberg_2005.svg')}}"></object>
+          </div>
+          <div class="carousel-item">
+            <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/Steven_Spielberg_2015.svg')}}"></object>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </section><!-- section2 -->
+        <section><!-- section3 --><!-- graph-->
+          <div class="row margin-b-40">
+            <div class="col-md-6">
+              <div class="margin-b-20">
+                <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/director_genres.svg')}}"></object>
+              </div>
+            </div>
+            <div class="col-md-6" style="background-color: #000">
+              <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/director/Steven_Spielberg/popular_d.svg')}}"></object>
+            </div>
+          </div>
+        </section><!-- section3 -->
+      </div> <!-- fullpage -->
+      <!-- Bootstrap core JavaScript -->
+      <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-  </body>
+    </body>
 
-  </html>
+    </html>

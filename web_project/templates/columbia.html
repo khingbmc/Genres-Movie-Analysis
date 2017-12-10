@@ -16,7 +16,19 @@
   <style type="text/css">
   @media (min-width: 992px) {
     header.masthead>.overlay {
-      padding: 22.5rem 0;}
+      padding: 13rem 0;}
+    #history{
+      text-align: justify;
+      color: #A4A4A4;
+    }
+    header.masthead{
+      background: url('{{ url_for('static', filename='img/bg_colombia.jpg') }}') repeat center center fixed;  /*fixed*/
+      height: 100%;
+      -webkit-background-size: auto;
+     -moz-background-size: auto;
+      background-size: 100%;
+      -o-background-size: auto;
+    }
     </style>
   </head>
   <body>
@@ -50,13 +62,8 @@
             <div class="container">
               <div id="biology" class="row"> <!-- biology.text -->
                 <div>
-                  <h1 class="col-md-1">biology</h1>
-                  <p class="col-md-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <h1 class="col-md-5" style="color: #A4A4A4; font-weight: bold;">Columbia Pictures</h1>
+                  <p class="col-md-8" id="history">&ensp;&ensp;&ensp;&ensp;&ensp;โคลัมเบีย พิคเจอร์ส อินดัสทรีส์, อิงก์. Columbia Pictures Industries, Inc. เป็นบริษัทผลิตภาพยนตร์และจัดจำหน่าย ปัจจุบันโคลัมเบียพิคเจอร์สเป็นส่วนหนึ่งของ โคลัมเบีย ไตรสตาร์ โมชัน พิกเจอร์ กรุป มีเจ้าของคือโซนี พิคเจอร์ส เอนเตอร์เทนเมนต์ สตูดิโอก่อตั้งในปี ค.ศ. 1919 ในชื่อ คอห์น-แบรนดต์-คอห์น ฟิล์ม เซลส์ โดยพี่น้องแจ็กและแฮร์รี คอห์น และโจ แบรนดต์ ออกฉายภาพยนตร์เรื่องแรกในเดือนสิงหาคม ค.ศ. 1922 และมาใช้ชื่อว่าโคลัมเบียพิคเจอร์สในปี ค.ศ. 1924 และสู่สาธารณะในอีก 2 ปีถัดมา ในยุคแรกของวงการฮอลลีวูด โคลัมเบียพิคเจอร์สเติบโตในช่วงปลายคริสต์ทศวรรษ 1920 กับความสำเร็จของผู้กำกับอย่างแฟรงก์ คาปรา</p>
                 </div>
               </div><!-- end.biology.text -->
             </div> <!-- container -->
@@ -123,12 +130,8 @@
                   <img class="img-responsive" src="{{ url_for('static', filename='img/top3/skyfall.cb.jpg')}}">
                 </div>
                 <h4><span class="text-uppercase margin-l-20">Skyfall</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>&ensp;&ensp;รายได้ ทั่วโลก 908,561,013$</p>
+                <p>&ensp;&ensp;&ensp;สายลับ MI6 เจมส์ บอนด์ และอีฟ ได้รับภารกิจให้ตามยึดฮาร์ดไดรฟ์ที่บรรจุข้อมูลเกี่ยวกับสายลับ NATO ทุกคนที่แฝงตัวอยู่ในองค์กรก่อการร้ายทั่วโลกคืนมา ทั้งสองได้ไล่ตามพาทริซ นักฆ่าที่ขโมยฮาร์ดไดรฟ์ไป ในระหว่างที่สู้กันบนหลังคารถไฟ บอนด์ถูกยิงและตกลงไปสู่แม่น้ำเบื้องล่าง เมื่อไม่พบศพ บอนด์จึงตกอยู่ในสถานะ "หายสาบสูญ คาดว่าเสียชีวิตแล้ว"</p>
               </div>
               <!-- End skyfall Products -->
               <!-- spiderman Products -->
@@ -137,6 +140,7 @@
                   <img class="img-responsive" src="{{ url_for('static', filename='img/top3/spiderman.cb.jpg')}}">
                 </div>
                 <h4><span class="text-uppercase margin-l-20">Spide-Man</span></h4>
+                <p>รายได้ ทั่วโลก 682,708,551$</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -150,7 +154,8 @@
                   <img class="img-responsive" src="{{ url_for('static', filename='img/top3/dvc.cb.jpg')}}">
                 </div>
                 <h4><span class="text-uppercase margin-l-20">Davici Code</span></h4>
-                <p>The war ended with the victory of the Allies. The results of the war have changed the political and social structure of the world. The United Nations is established. To promote international cooperation and to prevent future conflicts. The United States and the Soviet Union stepped up as the world's protagonists, a contender. Leading to conflict on the stage of the Cold War. It continued for 46 years after the war.</p>
+                <p>&ensp;&ensp;รายได้ ทั่วโลก 642,820,459$</p>
+                <p>&ensp;&ensp;&ensp;ค่ำคืนหนึ่งกลางกรุงปารีส ประเทศฝรั่งเศส ฌาคส์ โซนิแยร์ ภัณฑารักษ์หัวหน้าผู้ดูแลพิพิธภัณฑ์ 'ลูฟว์' พิพิธภัณฑ์ศิลปะที่ใหญ่ที่สุดแห่งหนึ่งของโลก ถูกฆาตกรรมอย่างโหดเ!้ยมในพิพิธภัณฑ์ อย่างไม่ทราบสาเหตุ โดยก่อนเสียชีวิต โซนิแยร์ ได้ทิ้งปริศนาการตาย เป็นศพของเขาที่วางอยู่บนเป็นรูปสัญลักษณ์ 'วิทรูเวียนแมน' หรือรูปคนกลางแขนบนดาวห้าแฉก เหมือนเป็น 1 ในผลงานเลื่องชื่อของศิลปินระดับโลก ลีโอนาโด ดาวินชี โรเบิรต์ แลงดอน (ทอม แฮงค์) ในการไขรหัสลับของคดีฆาตกรรมอันน่าสยดสยองนี้  แต่ความจริงที่อยู่เบื้องหลังการถอดรหัสครั้งนี้ กลับเปิดโปงเรื่องลับศรัทธา ที่คนเชื่อถือมานานกว่า 2,000 ปี</p>
               </div>
               <!-- End Davici Products -->
             </div>
