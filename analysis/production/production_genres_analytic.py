@@ -4,7 +4,7 @@ import numpy as np
 import pygal
 from pygal.style import NeonStyle
 """Project PSIT"""
-with open('..\\check.json') as genres:
+with open('..\\..\\web_project\\check.json') as genres:
     DATA = json.load(genres) #import json file
 
 
@@ -39,7 +39,7 @@ def analyse():
     return memory
 
 
-def plotgraph(check):
+def plotgraph(check, memory):
     """PLOT GRAPH"""
     count = 0
     mem = analyse()
@@ -48,6 +48,13 @@ def plotgraph(check):
     for i in mem[check].keys():
         count += int(mem[check][i])
     for i in mem[check].keys():
-        pie_chart.add(DATA[str(i)], int(mem[check][i])/count*100)
-    pie_chart.render_to_file('..\\..\\web_project\\static\\svg\\%s\\%s.svg'%(check.replace(' ', '_'), check.replace(' ', '_')))
-plotgraph(input())
+        if mem[check][i] not in memory:
+            memory[mem[check][i]] = [str(i)]
+        else:
+            memory[mem[check][i]].append(str(i))
+    keys = sorted(memory.keys())
+    for i in keys:
+        for j in memory[i]:
+            pie_chart.add(DATA[str(j)], round(i*100/count, 2))
+    pie_chart.render_to_file('..\\..\\web_project\\static\\svg\\production\\%s\\%s.svg'%(check.replace(' ', '_'), check.replace(' ', '_')))
+plotgraph(input(), {})

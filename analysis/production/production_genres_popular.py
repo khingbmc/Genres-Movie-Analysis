@@ -23,11 +23,18 @@ def analyse(name, genres_pop):
     return genres_pop, count
 
 
-def plotgraph(name):
+def plotgraph(name, mem):
     genres_pop, count = analyse(name, {})
     chart = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle)
     chart.title = name+' Static Popular Genres (%)'
-    chart.x_labels = map(str, [x for x in genres_pop.keys()])
-    chart.add('Popular', [round(genres_pop[x]/count*100, 3) for x in genres_pop.keys()])
-    chart.render_to_file('..\\..\\web_project\\static\\svg\\%s\\%s_genrespopular.svg'%(name.replace(' ', '_'), name.replace(' ', '_')))
-plotgraph(input())
+    for i in genres_pop.keys():
+        if genres_pop[i] not in mem:
+            mem[genres_pop[i]] = [i]
+        else:
+            mem[genres_pop[i]].append(i)
+    keys = sorted(mem.keys())
+    for i in keys:
+        for j in mem[i]:
+            chart.add(j, round(i*100/count, 2))
+    chart.render_to_file('..\\..\\web_project\\static\\svg\\production\\%s\\%s_genrespopular.svg'%(name.replace(' ', '_'), name.replace(' ', '_')))
+plotgraph(input(), {})

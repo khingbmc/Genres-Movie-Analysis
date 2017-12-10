@@ -34,7 +34,7 @@ def analyse(director_name, year, mem, count):
     director, df_movie, df_credits = memory_director()
     for idx, data in df_movie.iterrows():
         check_year = str(data.release_date)[-1:-5:-1][::-1]
-        if data.id in director[director_name] and 0 <= year - int(check_year) <= 10:
+        if data.id in director[director_name] and 0 <= int(check_year)-year <= 9:
             for i in json.loads(data.genres):
                 if i['name'] not in mem:
                     mem[i['name']] = 1
@@ -48,7 +48,7 @@ def plotgraph(name, year):
     """function plotgraph"""
     pie_director = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle)
     director, count = analyse(name, year, {}, 0)
-    pie_director.title = 'Static Genres of '+name+' directing in %s-%s.'%(str(year-10), str(year))
+    pie_director.title = 'Static Genres of '+name+' directing in %s-%s.'%(str(year), str(year+9))
     check = {}
     for i in director:
         if director[i] not in check:
@@ -60,4 +60,5 @@ def plotgraph(name, year):
         for i in check[j]:
             pie_director.add(i, round(j/count*100, 3))
     pie_director.render_to_file('..\\..\\web_project\\static\\svg\\director\\%s\\%s_%s.svg'%(name.replace(' ', '_'), name.replace(' ', '_'), str(year)))
+
 plotgraph(input(), int(input()))
