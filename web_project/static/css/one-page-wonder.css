@@ -64,6 +64,12 @@ header.masthead>.overlay {
   height: 100vh;
   
 }
+section:nth-child(1){
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
 section:nth-child(2){
   margin: 0;
   padding: 0;
