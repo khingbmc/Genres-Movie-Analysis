@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 import pygal
-from pygal.style import DefaultStyle
+from pygal.style import NeonStyle
 
 with open('..\\..\\web_project\\check.json') as genres:
     DATA = json.load(genres) #import json file
@@ -38,7 +38,7 @@ def analyse(year):
 def plotgraph(year, check):
     """This function is Plot graph"""
     memory, count1 = analyse(year)
-    plot_bar, check1 = pygal.Bar(fill=True, interpolate='cubic', style=DefaultStyle), 0
+    plot_bar, check1 = pygal.Bar(fill=True, interpolate='cubic', style=NeonStyle), 0
     plot_bar.title = 'Genres Satic in '+year+'-'+str(int(year)+9)
     for j in memory:
         check1 += float(memory[j])

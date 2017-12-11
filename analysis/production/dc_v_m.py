@@ -31,7 +31,7 @@ def analyse(count_d, count_m, mem_d, mem_m):
                 else:
                     dc[check_year] += (float(data.revenue)-float(data.budget))
                 count_d += 1
-    dot_m = pygal.Line(x_label_rotation=30)
+    dot_m = pygal.Line(x_label_rotation=30, style=NeonStyle)
     dot_m.title = 'Marvel and DC Profit'
     dot_m.x_labels = map(str, range(2008, 2017))
     print(dc, marvel)
