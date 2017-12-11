@@ -89,14 +89,19 @@ section:nth-child(3){
 section:nth-child(4){
   margin: 0;
   padding: 0;
-  height: 100vh;
   background-color: #EFECEC;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
+  height: relative;
+
 }
-section:nth-child(4)::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+.scroll{
+  height: 35vh;
+  overflow: scroll;
+}
+.scroll::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+
 }
 section:nth-child(5){
   margin: 0;
