@@ -92,9 +92,13 @@ section:nth-child(4){
   padding: 0;
   height: 100vh;
   background-color: #EFECEC;
-  
 
-
+}
+section:nth-child(4)#Columbia{
+  margin: 0;
+  padding: 1.17rem 0;
+  height: 100vh;
+  background-color: #EFECEC;
 }
 section:nth-child(5){
   margin: 0;
