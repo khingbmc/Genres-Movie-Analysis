@@ -62,20 +62,21 @@ header.masthead>.overlay {
 }
 #fullpage section{
   height: 100vh;
+  overflow: hidden;
   
 }
 section:nth-child(1){
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden;
+  
 }
 section:nth-child(2){
   margin: 0;
   padding: 0;
   height: 100vh;
   background-color: #EFECEC;
-  overflow: hidden;
+  
 }
 section:nth-child(3){
   margin: 0;
@@ -83,24 +84,16 @@ section:nth-child(3){
   height: 100vh;
   background-color: #000;
   color: #EFECEC;
-  overflow: hidden;
+  
 
 }
 section:nth-child(4){
   margin: 0;
   padding: 0;
+  height: 100vh;
   background-color: #EFECEC;
-  overflow: hidden;
-  height: relative;
+  
 
-}
-.scroll{
-  height: 35vh;
-  overflow: scroll;
-}
-.scroll::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
 
 }
 section:nth-child(5){
@@ -109,44 +102,59 @@ section:nth-child(5){
   height: 100vh;
   background-color: #000;
   color: #EFECEC;
-  overflow: hidden;
+  
 }
 section:nth-child(6){
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #EFECEC;
-  overflow: hidden;
+  background-color: #000;
+  
 }
 section:nth-child(7){
   margin: 0;
-  padding: 0;
+  padding: 1.17rem 0;
   height: 100vh;
-  background-color: #000;
-  color: #EFECEC;
-  overflow: hidden;
+  background-color: #EFECEC;
+  color: #000;
+  
 }
 section:nth-child(8){
   margin: 0;
-  padding: 0;
+  padding: 1.17rem 0;
   height: 100vh;
-  background-color: #EFECEC;
-  overflow: hidden;
+  background-color: #000;
+  color: #EFECEC
+  
 }
-section:nth-child(9){
+/*section:nth-child(9){
   margin: 0;
   padding: 0;
   height: 100vh;
   background-color: #000;
   color: #EFECEC;
-  overflow: hidden;
+  
+}*/
+
+.scroll{
+  height: 34vh;
+  overflow: scroll;
 }
+.scroll::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
 .svgfile{
   height: 85vh;
   width: cover;
+  object-position;
 }
 .filefix{
   text-align: center;
   padding: 1.5rem 0;
 }
-
+#solograph{
+  text-align: center;
+  padding-top: 52.7px;
+}

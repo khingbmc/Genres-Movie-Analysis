@@ -76,7 +76,7 @@
         </header> <!-- masthead -->
       </section><!-- section1 -->
       <section><!-- section2 --><!-- graph-->
-        <h1>GENRES</h1>
+        <!-- <h1>GENRES</h1> -->
         <div class="row margin-b-40">
           <div class="col-md-6">
             <div class="margin-b-20">
@@ -91,7 +91,7 @@
       <section><!-- section3 --><!-- pop-->
         <div class="row margin-b-40">
           <div class="col-md-6">
-            <h1>POPULAR</h1>
+            <!-- <h1>POPULAR</h1> -->
             <div class="margin-b-20">
               <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/production/DC_Marvel/Marvel_Studios_genrespopular.svg')}}"></object>
             </div>
@@ -100,10 +100,9 @@
             <div>
               <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/production/DC_Marvel/DC_Comics_genrespopular.svg')}}"></object>
             </div>
-
           </div>
         </section>
-        <section style="background-color: #232323;"><!-- section3--><!-- DC slide graph -->
+        <section style="background-color: #232323;"><!-- section4--><!-- marvel slide graph -->
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
             </ol>
@@ -125,7 +124,7 @@
             </a>
           </div>
         </section><!-- section4-->
-        <section style="background-color: #232323;"><!-- section4 --><!-- DC slide graph -->
+        <section style="background-color: #000;"><!-- section5 --><!-- DC slide graph -->
           <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
             </ol>
@@ -149,13 +148,13 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-        </section><!-- section4-->
-        <section>
-          <div class="margin-b-20">
-            <object class="production_s2" type="image/svg+xml" data="{{url_for('static', filename='./svg/production/DC_Marvel/check_benefit.svg')}}"></object>
+        </section><!-- section5-->
+        <section> <!-- section6 -->
+          <div class="margin-b-20" id="solograph">
+            <object class="svgfile" type="image/svg+xml" data="{{url_for('static', filename='./svg/production/DC_Marvel/check_benefit.svg')}}"></object>
           </div>
         </section>
-        <section><!-- section5 --><!-- top3 -->
+        <section><!-- section7 --><!-- top3 -->
           <div class="container content-lg">
             <div class="row text-center margin-b-40">
               <div> <!-- class="col-sm-6 col-sm-offset-6" -->
@@ -195,48 +194,48 @@
               <!-- End Davici Products -->
             </div>
             <!--// end row -->
-          </section><!-- section5 -->
-         <section><!-- section4 --><!-- top3 -->
-          <div class="container content-lg">
-            <div class="row text-center margin-b-40">
-              <div> <!-- class="col-sm-6 col-sm-offset-6" -->
-                <h2>Top 3 DC's Movies at the box office</h2>
-                <p>The unfairness of the Treaty of Versailles and other peace agreements. Which was made after the First World War. They were forced to sign contracts that were at a disadvantage</p>
-              </div>
-            </div>
-            <div class="row">
-              <!-- skyfall Products -->
-              <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                  <img class="img-responsive" src="{{ url_for('static', filename='img/top3/bm.dc.jpg')}}">
+          </section><!-- section7 -->
+          <section><!-- section8 --><!-- top3 -->
+            <div class="container content-lg">
+              <div class="row text-center margin-b-40">
+                <div> <!-- class="col-sm-6 col-sm-offset-6" -->
+                  <h2>Top 3 DC's Movies at the box office</h2>
+                  <p>The unfairness of the Treaty of Versailles and other peace agreements. Which was made after the First World War. They were forced to sign contracts that were at a disadvantage</p>
                 </div>
-                <h4><span class="text-uppercase margin-l-20">The Dark Knight</span></h4>
-                <p>&ensp;&ensp;รายได้ ทั่วโลก 819,558,444$</p>
-                <p>&ensp;&ensp;&ensp;ด้วยความช่วยเหลือของผู้หมวดจิม กอร์ดอน และอัยการเขตฮาร์วีย์ เดนท์ แบทแมนมุ่งมั่นที่จะทำลายล้างองค์กรอาชญากรรมในกอธแฮมให้สิ้นซาก การทำงานแบบสามทหารเสือดูเหมือนจะสัมฤทธิผล แต่ไม่ช้าพวกเขากลับพบว่าตกเป็นเหยื่อของจอมอาชญากรอย่างโจ๊กเกอร์ ผู้ซึ่งทำให้กอธแธมต้องตกอยู่ในความสับสน และบีบบังคับให้อัศวินดำต้องเฉียดเข้าไปใกล้เส้นแบ่งระหว่างวีรบุรุษและวายร้ายมากยิ่งขึ้น</p>
               </div>
-              <!-- End skyfall Products -->
-              <!-- spiderman Products -->
-              <div class="col-sm-4 sm-margin-b-50" id="spider">
-                <div class="margin-b-20">
-                  <img class="img-responsive" src="{{ url_for('static', filename='img/top3/bvs.dc.jpeg')}}">
+              <div class="row">
+                <!-- skyfall Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                  <div class="margin-b-20">
+                    <img class="img-responsive" src="{{ url_for('static', filename='img/top3/bm.dc.jpg')}}">
+                  </div>
+                  <h4><span class="text-uppercase margin-l-20">The Dark Knight</span></h4>
+                  <p>&ensp;&ensp;รายได้ ทั่วโลก 819,558,444$</p>
+                  <p class="scroll">&ensp;&ensp;&ensp;ด้วยความช่วยเหลือของผู้หมวดจิม กอร์ดอน และอัยการเขตฮาร์วีย์ เดนท์ แบทแมนมุ่งมั่นที่จะทำลายล้างองค์กรอาชญากรรมในกอธแฮมให้สิ้นซาก การทำงานแบบสามทหารเสือดูเหมือนจะสัมฤทธิผล แต่ไม่ช้าพวกเขากลับพบว่าตกเป็นเหยื่อของจอมอาชญากรอย่างโจ๊กเกอร์ ผู้ซึ่งทำให้กอธแธมต้องตกอยู่ในความสับสน และบีบบังคับให้อัศวินดำต้องเฉียดเข้าไปใกล้เส้นแบ่งระหว่างวีรบุรุษและวายร้ายมากยิ่งขึ้น</p>
                 </div>
-                <h4><span class="text-uppercase margin-l-20">Batman v Superman: Dawn of Justice</span></h4>
-                <p>&ensp;&ensp;รายได้ ทั่วโลก 623,260,194$</p>
-                <p>&ensp;&ensp;&ensp;แบทแมนที่อยู่ในเหตุการณ์นั้นได้เห็นถึงพลังอำนาจของซูเปอร์แมนที่เป็นได้ทั้งคุณและโทษ จนเมื่อเวลาผ่านไป 2 ปี ซูเปอร์แมน ในนามของ คลาร์ก เคนท์ ได้ทำงานเป็นนักข่าว และต้องการสืบหาตัวตนของ แบทแมน ชายลึกลับที่ตั้งตนเป็นศาลเตี้ยกำจัดวายร้ายนอกกฎหมายกระแสสังคมที่มีต่อซูเปอร์แมนผู้มีพลังเหนือมนุษย์ ได้แตกออกเป็น 2 ฝั่ง ผู้ที่นับถือเขาเปรียบดังพระเจ้าองค์ใหม่ และผู้คนที่หวาดระแวงในพลังของเขาที่มากเกินควบคุมความบาดหมางระหว่างแบทแมนกับซูเปอร์แมนที่ค่อยๆ รุนแรงขึ้นเรื่อยๆ ภัยคุกคามเบื้องหลังพวกเขาก็ค่อยๆ ก่อตัวขึ้นอย่างรวดเร็วทำให้มวลมนุษยชาติต้องตกอยู่ในอันตรายแบบที่ไม่เคยมีมาก่อน…</p>
-              </div><!-- End spiderman Products -->
-              <!-- End Davici Products -->
-              <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                  <img class="img-responsive" src="{{ url_for('static', filename='img/top3/suis.dc.jpg')}}">
+                <!-- End skyfall Products -->
+                <!-- spiderman Products -->
+                <div class="col-sm-4 sm-margin-b-50" id="spider">
+                  <div class="margin-b-20">
+                    <img class="img-responsive" src="{{ url_for('static', filename='img/top3/bvs.dc.jpeg')}}">
+                  </div>
+                  <h4><span class="text-uppercase margin-l-20">Batman v Superman: Dawn of Justice</span></h4>
+                  <p>&ensp;&ensp;รายได้ ทั่วโลก 623,260,194$</p>
+                  <p class="scroll">&ensp;&ensp;&ensp;แบทแมนที่อยู่ในเหตุการณ์นั้นได้เห็นถึงพลังอำนาจของซูเปอร์แมนที่เป็นได้ทั้งคุณและโทษ จนเมื่อเวลาผ่านไป 2 ปี ซูเปอร์แมน ในนามของ คลาร์ก เคนท์ ได้ทำงานเป็นนักข่าว และต้องการสืบหาตัวตนของ แบทแมน ชายลึกลับที่ตั้งตนเป็นศาลเตี้ยกำจัดวายร้ายนอกกฎหมายกระแสสังคมที่มีต่อซูเปอร์แมนผู้มีพลังเหนือมนุษย์ ได้แตกออกเป็น 2 ฝั่ง ผู้ที่นับถือเขาเปรียบดังพระเจ้าองค์ใหม่ และผู้คนที่หวาดระแวงในพลังของเขาที่มากเกินควบคุมความบาดหมางระหว่างแบทแมนกับซูเปอร์แมนที่ค่อยๆ รุนแรงขึ้นเรื่อยๆ ภัยคุกคามเบื้องหลังพวกเขาก็ค่อยๆ ก่อตัวขึ้นอย่างรวดเร็วทำให้มวลมนุษยชาติต้องตกอยู่ในอันตรายแบบที่ไม่เคยมีมาก่อน…</p>
+                </div><!-- End spiderman Products -->
+                <!-- End Davici Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                  <div class="margin-b-20">
+                    <img class="img-responsive" src="{{ url_for('static', filename='img/top3/suis.dc.jpg')}}">
+                  </div>
+                  <h4><span class="text-uppercase margin-l-20">Suicide Squad</span></h4>
+                  <p>&ensp;&ensp;รายได้ ทั่วโลก 570,000,000$</p>
+                  <p class="scroll">&ensp;&ensp;&ensp;สำหรับเนื้อเรื่องนั้น จะเป็นกล่าวถึงบรรดาเหล่าร้ายที่ได้รับโอกาสจากทางรัฐบาลในการไถ่โทษจากการทำวีรกรรมชั่วร้ายในอดีตที่พวกเขาก่อไว้ โดยการต้องมาปฏิบัติภารกิจเสี่ยงตายที่มีโอกาสรอดน้อยนิดร่วมกัน เพื่อแลกกับการลดหย่อนโทษและอิสรภาพที่พวกเขาจะได้รับจากการไม่ต้องถูกจำคุกตลอดชีวิต เหมือนการ “ฆ่าตัวตายหมู่“ สมชื่อ “Suicide Squad“</p>
                 </div>
-                <h4><span class="text-uppercase margin-l-20">Suicide Squad</span></h4>
-                <p>&ensp;&ensp;รายได้ ทั่วโลก 570,000,000$</p>
-                <p>&ensp;&ensp;&ensp;สำหรับเนื้อเรื่องนั้น จะเป็นกล่าวถึงบรรดาเหล่าร้ายที่ได้รับโอกาสจากทางรัฐบาลในการไถ่โทษจากการทำวีรกรรมชั่วร้ายในอดีตที่พวกเขาก่อไว้ โดยการต้องมาปฏิบัติภารกิจเสี่ยงตายที่มีโอกาสรอดน้อยนิดร่วมกัน เพื่อแลกกับการลดหย่อนโทษและอิสรภาพที่พวกเขาจะได้รับจากการไม่ต้องถูกจำคุกตลอดชีวิต เหมือนการ “ฆ่าตัวตายหมู่“ สมชื่อ “Suicide Squad“</p>
+                <!-- End Davici Products -->
               </div>
-              <!-- End Davici Products -->
-            </div>
-            <!--// end row -->
-          </section><!-- section4 -->
+              <!--// end row -->
+            </section><!-- section8 -->
           </div>
           <!-- Bootstrap core JavaScript -->
           <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>

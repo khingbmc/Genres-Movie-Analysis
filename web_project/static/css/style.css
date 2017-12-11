@@ -27,9 +27,9 @@
         width: 40vh;
     }
 
-    .graph-size {
+    .graph-size { /*for 2 graph*/
     width: 100vh;
-    height: 70%;
+    height: 85vh
     min-width: 300px;
     margin-left: 50vh;
     margin-top: 15vh;
