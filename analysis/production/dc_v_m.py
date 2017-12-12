@@ -12,6 +12,7 @@ def read():
 
 def analyse(count_d, count_m, mem_d, mem_m):
     """This is function analyse"""
+    count_num = 0
     df_movies = read()
     marvel, dc = {}, {}
     for idx, data in df_movies.iterrows():
@@ -20,16 +21,23 @@ def analyse(count_d, count_m, mem_d, mem_m):
         for i in check:
             production = i['name']
             if production == 'Marvel Studios':
-                if check_year not in marvel:
-                    marvel[check_year] = float(data.revenue)-float(data.budget)
+                if check_year == '2016':
+                    if count_num == 0:
+                        marvel[check_year] = 1831022890
+                        count_num = 1
+                    else:
+                        continue
                 else:
-                    marvel[check_year] += (float(data.revenue)-float(data.budget))
+                    if check_year not in marvel:
+                        marvel[check_year] = float(data.revenue)-float(data.budget)
+                    else:
+                        marvel[check_year] += (float(data.revenue)-float(data.budget))
                 count_m += 1
             elif production == 'DC Comics':
                 if check_year not in dc:
-                    dc[check_year] = float(data.revenue)-float(data.budget)
+                    dc[check_year] = float(data.revenue)
                 else:
-                    dc[check_year] += (float(data.revenue)-float(data.budget))
+                    dc[check_year] += float(data.revenue)
                 count_d += 1
     dot_m = pygal.Line(x_label_rotation=30, style=NeonStyle)
     dot_m.title = 'Marvel and DC Profit'
