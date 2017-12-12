@@ -12,7 +12,11 @@ def read():
 
 def analyse(mem_d, mem_m): #mem_m is marvel revenue , mem_d is DC revenue
     """This is function analyse"""
+<<<<<<< HEAD
     count_num = 0 #count_num is check round in loop
+=======
+    count_num = 0
+>>>>>>> 6510efb639140a28012f5144f55e1c6f54a11dd0
     df_movies = read()
     marvel, dc = {}, {} #memory revenue in year
     
@@ -24,6 +28,7 @@ def analyse(mem_d, mem_m): #mem_m is marvel revenue , mem_d is DC revenue
             if production == 'Marvel Studios':
                 if check_year == '2016':
                     if count_num == 0:
+<<<<<<< HEAD
                         marvel[check_year] = 1831022890 #data is wrong because true revenue is 1831022890 not 2734327385
                     else:
                         continue
@@ -34,12 +39,28 @@ def analyse(mem_d, mem_m): #mem_m is marvel revenue , mem_d is DC revenue
                     else:
                         marvel[check_year] += float(data.revenue)
             
+=======
+                        marvel[check_year] = 1831022890
+                        count_num = 1
+                    else:
+                        continue
+                else:
+                    if check_year not in marvel:
+                        marvel[check_year] = float(data.revenue)-float(data.budget)
+                    else:
+                        marvel[check_year] += (float(data.revenue)-float(data.budget))
+                count_m += 1
+>>>>>>> 6510efb639140a28012f5144f55e1c6f54a11dd0
             elif production == 'DC Comics':
                 if check_year not in dc:
                     dc[check_year] = float(data.revenue)
                 else:
                     dc[check_year] += float(data.revenue)
+<<<<<<< HEAD
     
+=======
+                count_d += 1
+>>>>>>> 6510efb639140a28012f5144f55e1c6f54a11dd0
     dot_m = pygal.Line(x_label_rotation=30, style=NeonStyle)
     dot_m.title = 'Marvel and DC Profit'
     dot_m.x_labels = map(str, range(2008, 2017))
