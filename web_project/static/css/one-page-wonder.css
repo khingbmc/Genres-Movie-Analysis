@@ -117,7 +117,6 @@ section:nth-child(6){
 }
 section:nth-child(7){
   margin: 0;
-  padding: 1.17rem 0;
   height: 100vh;
   background-color: #000;
   color: #000;
@@ -125,7 +124,6 @@ section:nth-child(7){
 }
 section:nth-child(8){
   margin: 0;
-  padding: 1.17rem 0;
   height: 100vh;
   background-color: #000;
   color: #EFECEC
