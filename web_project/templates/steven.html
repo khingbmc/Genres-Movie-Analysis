@@ -19,7 +19,11 @@
   <!-- boom csss-->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/boom.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
-
+  <style type="text/css">
+  header.masthead {
+   background-image: url("{{ url_for('static', filename='img/directors/steven-wallpaper.jpg')}}")
+ }
+</style>
 </head>
 
 <body>
@@ -49,10 +53,18 @@
   <!-- END NAVBAR -->
   <div id="fullpage">
     <section>
-      <header class="masthead"> 
-        <div class="overlay">
-        </div> <!-- overlay -->
-      </header> <!-- masthead -->
+      <header class="masthead">
+          <div class="overlay">
+            <div class="container">
+              <div id="biology" class="row"> <!-- biology.text -->
+                <div>
+                  <h1 class="col-md-6" style="color: #A4A4A4; font-weight: bold;">Steven Spielberg</h1>
+                  <p class="col-md-8" id="history" style="text-align: justify; color: #EFECEC;">&ensp;&ensp;&ensp;&ensp;&ensp;เกิดเมื่อ 18 ธันวาคม 2489 เกิด ซินซินนาติ, โอไฮโอ ประเทศสหรัฐอเมริกา เป็นนักเขียนและโปรดิวเซอร์ เขามีชื่อเสียงจากการกำกับภาพยนตร์ที่ดังระเบิดอย่าง Jaws, E.T. The Extra-Terrestrial, ภาพยนตร์แฟรนไชส์เรื่อง &ensp;&ensp;The Indiana Jones และภาพยนตร์เรื่อง Jurassic Park ท่ามกลางชื่อเสียงของเขาอีกมากมายมหาศาล เขาเป็นผู้คว้ารางวัล Academy Award® มาแล้วถึงสามครั้ง</p>
+                </div>
+              </div><!-- end.biology.text -->
+            </div> <!-- container -->
+          </div> <!-- overlay -->
+        </header> <!-- masthead -->
     </section> <!-- section 1 -->
     <section style="background-color: #232323;"><!-- section2 --><!-- slide graph -->
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -141,11 +153,11 @@
             </div>
             <!--// end row -->
           </section><!-- section7 -->
-      </div> <!-- fullpage -->
-      <!-- Bootstrap core JavaScript -->
-      <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
-      <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        </div> <!-- fullpage -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    </body>
+      </body>
 
-    </html>
+      </html>
